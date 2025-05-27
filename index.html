@@ -21,9 +21,6 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
     
-    <!-- Cargar PayPal SDK una sola vez -->
-    <script src="https://www.paypal.com/sdk/js?client-id=BAASpaJX4iSzjc0WNwJcnSAfXsim92rM6uLD3aO5xF1JzoTgBloTMmcVCYWUMBGetyzQRPUDv91DSDzO5Y&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-    
     <style>
         :root {
             /* Sistema de diseño moderno */
@@ -247,36 +244,18 @@
             transform: translateY(-2px);
         }
         
-        /* Estilo para contenedor de opciones de pago */
-        .payment-options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-top: auto;
-        }
-        
-        .payment-option {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-        
-        .payment-option-label {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--gray);
-        }
-        
-        .paypal-container {
+        .btn-paypal {
+            background: #0070ba;
+            color: white;
             width: 100%;
-            min-height: 40px;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(0, 112, 186, 0.3);
         }
         
-        .paypal-fallback {
-            font-size: 0.85rem;
-            color: var(--gray);
-            text-align: center;
-            margin-top: 0.5rem;
+        .btn-paypal:hover {
+            background: #005ea6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 112, 186, 0.4);
         }
         
         .btn-mercadopago {
@@ -291,6 +270,104 @@
             background: #008bb5;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 166, 214, 0.4);
+        }
+        
+        .installments-note {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        
+        .installments-note span {
+            color: var(--discount);
+            font-weight: 600;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: var(--rounded-md);
+            max-width: 900px;
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+        
+        .modal-close:hover {
+            color: var(--primary);
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--dark);
+        }
+        
+        .modal-payment-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-payment-option {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .modal-payment-option h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .modal-payment-option p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-disclaimer {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-align: center;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: var(--rounded-sm);
+            line-height: 1.5;
         }
         
         /* Secciones mejoradas */
@@ -678,8 +755,14 @@
                 grid-template-columns: 1fr;
             }
             
-            .payment-options {
-                gap: 0.5rem;
+            .modal-payment-options {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+                max-width: 95%;
             }
         }
         
@@ -698,8 +781,16 @@
                 gap: 0.5rem;
             }
             
-            .paypal-container {
-                width: 100%;
+            .modal-title {
+                font-size: 1.5rem;
+            }
+            
+            .modal-payment-option h3 {
+                font-size: 1.1rem;
+            }
+            
+            .modal-disclaimer {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -799,7 +890,7 @@
         </div>
     </section>
 
-    <!-- Sección de Cursos Mejorada con Nuevos Precios en USD -->
+    <!-- Sección de Cursos Mejorada -->
     <section id="cursos" style="background: #f3f4f6;">
         <div class="container">
             <div class="section-title">
@@ -811,7 +902,7 @@
                 <!-- Curso: Introducción a la IA -->
                 <div class="course-card">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Introducción a la IA">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib DEEP LINKS
                         <span class="course-badge">Popular</span>
                         <span class="discount-tag">50% OFF</span>
                     </div>
@@ -833,15 +924,8 @@
                             <li>Soporte continuo</li>
                         </ul>
                         <div class="payment-options">
-                            <div class="payment-option">
-                                <div class="payment-option-label">Pagar con PayPal</div>
-                                <div id="paypal-container-3FG837N8GD9HY" class="paypal-container"></div>
-                                <p class="paypal-fallback" style="display: none;">¿Problemas con PayPal? Contáctanos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a>.</p>
-                            </div>
-                            <div class="payment-option">
-                                <div class="payment-option-label">Pagar con MercadoPago</div>
-                                <a href="https://www.mercadopago.com.uy" class="btn btn-mercadopago">Inscribirme</a>
-                            </div>
+                            <button class="btn btn-primary enroll-btn" data-course="Introducción a la IA" data-usd-price="$200.00 USD" data-uyu-price="8500.00 UYU" data-paypal-link="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3FG837N8GD9HY" data-mercadopago-link="https://mpago.la/1fPJtGy">Inscribirme <span style="color: var(--discount);">*</span></button>
+                            <p class="installments-note"><span>*</span> Hasta 12 cuotas sin interés con MercadoPago</p>
                         </div>
                     </div>
                 </div>
@@ -849,7 +933,7 @@
                 <!-- Curso: Machine Learning Intermedio -->
                 <div class="course-card">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Deep Learning">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machine Learning">
                         <span class="discount-tag">50% OFF</span>
                     </div>
                     <div class="course-content">
@@ -870,15 +954,8 @@
                             <li>Proyecto personal</li>
                         </ul>
                         <div class="payment-options">
-                            <div class="payment-option">
-                                <div class="payment-option-label">Pagar con PayPal</div>
-                                <div id="paypal-container-PWSQ27GK87NP4" class="paypal-container"></div>
-                                <p class="paypal-fallback" style="display: none;">¿Problemas con PayPal? Contáctanos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a>.</p>
-                            </div>
-                            <div class="payment-option">
-                                <div class="payment-option-label">Pagar con MercadoPago</div>
-                                <a href="https://www.mercadopago.com.uy" class="btn btn-mercadopago">Inscribirme</a>
-                            </div>
+                            <button class="btn btn-primary enroll-btn" data-course="Machine Learning Intermedio" data-usd-price="$350.00 USD" data-uyu-price="15000.00 UYU" data-paypal-link="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PWSQ27GK87NP4" data-mercadopago-link="https://mpago.la/1Uv8g7T">Inscribirme <span style="color: var(--discount);">*</span></button>
+                            <p class="installments-note"><span>*</span> Hasta 12 cuotas sin interés con MercadoPago</p>
                         </div>
                     </div>
                 </div>
@@ -886,7 +963,7 @@
                 <!-- Curso: Deep Learning Avanzado -->
                 <div class="course-card">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Machine Learning">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Deep Learning">
                         <span class="discount-tag">50% OFF</span>
                     </div>
                     <div class="course-content">
@@ -907,21 +984,37 @@
                             <li>Proyecto final</li>
                         </ul>
                         <div class="payment-options">
-                            <div class="payment-option">
-                                <div class="payment-option-label">Pagar con PayPal</div>
-                                <div id="paypal-container-CPVAWKUA7KQMU" class="paypal-container"></div>
-                                <p class="paypal-fallback" style="display: none;">¿Problemas con PayPal? Contáctanos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a>.</p>
-                            </div>
-                            <div class="payment-option">
-                                <div class="payment-option-label">Pagar con MercadoPago</div>
-                                <a href="https://www.mercadopago.com.uy" class="btn btn-mercadopago">Inscribirme</a>
-                            </div>
+                            <button class="btn btn-primary enroll-btn" data-course="Deep Learning Avanzado" data-usd-price="$500.00 USD" data-uyu-price="22000.00 UYU" data-paypal-link="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPVAWKUA7KQMU" data-mercadopago-link="https://mpago.la/2hEjDmD">Inscribirme <span style="color: var(--discount);">*</span></button>
+                            <p class="installments-note"><span>*</span> Hasta 12 cuotas sin interés con MercadoPago</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal for Payment -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <h2 class="modal-title">Inscribirte en <span id="modal-course-name"></span></h2>
+            <div class="modal-payment-options">
+                <div class="modal-payment-option">
+                    <h3>Pagar con PayPal</h3>
+                    <p>Pago único de <span id="modal-usd-price"></span></p>
+                    <button id="paypal-button" class="btn btn-paypal">Pagar en USD con PayPal</button>
+                </div>
+                <div class="modal-payment-option">
+                    <h3>Pagar con MercadoPago</h3>
+                    <p>Pago en hasta 12 cuotas sin interés de <span id="modal-uyu-installments"></span> (Total: <span id="modal-uyu-price"></span>)</p>
+                    <button id="mercadopago-button" class="btn btn-mercadopago">Pagar en UYU con MercadoPago</button>
+                </div>
+            </div>
+            <div class="modal-disclaimer">
+                <p>Una vez procesado el pago correctamente, recibirás las credenciales para acceder al curso por correo electrónico. Los cursos inician el primer sábado de cada mes. Si el curso es un regalo, puedes compartir las credenciales con otra persona, pero cada pago corresponde a una sola persona. Para inscripciones de múltiples personas, realiza pagos separados o contáctanos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a> para una oferta personalizada.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Sección de Modalidad -->
     <section id="modalidad">
@@ -1098,35 +1191,95 @@
             });
         });
 
-        // Inicializar botones de PayPal con manejo de errores
-        try {
-            paypal.HostedButtons({
-                hostedButtonId: "3FG837N8GD9HY",
-            }).render("#paypal-container-3FG837N8GD9HY").catch(() => {
-                document.querySelector('#paypal-container-3FG837N8GD9HY + .paypal-fallback').style.display = 'block';
-            });
+        // Modal functionality - Versión completamente corregida
+        const modal = document.getElementById('payment-modal');
+        const modalCourseName = document.getElementById('modal-course-name');
+        const modalUsdPrice = document.getElementById('modal-usd-price');
+        const modalUyuPrice = document.getElementById('modal-uyu-price');
+        const modalUyuInstallments = document.getElementById('modal-uyu-installments');
+        const paypalButton = document.getElementById('paypal-button');
+        const mercadopagoButton = document.getElementById('mercadopago-button');
+        const modalClose = document.querySelector('.modal-close');
+        const enrollButtons = document.querySelectorAll('.enroll-btn');
+        
+        // Variables para almacenar los enlaces de pago
+        let currentPaypalLink = '';
+        let currentMercadopagoLink = '';
+        
+        // Función para abrir el modal con los datos del curso
+        function openPaymentModal(course, usdPrice, uyuPrice, paypalLink, mercadopagoLink) {
+            // Actualizar contenido del modal
+            modalCourseName.textContent = course;
+            modalUsdPrice.textContent = usdPrice;
+            modalUyuPrice.textContent = uyuPrice;
             
-            paypal.HostedButtons({
-                hostedButtonId: "PWSQ27GK87NP4",
-            }).render("#paypal-container-PWSQ27GK87NP4").catch(() => {
-                document.querySelector('#paypal-container-PWSQ27GK87NP4 + .paypal-fallback').style.display = 'block';
-            });
+            // Calcular cuotas
+            const uyuAmount = parseFloat(uyuPrice.replace(/[^\d.]/g, ''));
+            const monthlyInstallment = (uyuAmount / 12).toFixed(2);
+            modalUyuInstallments.textContent = `${monthlyInstallment} UYU/mes`;
             
-            paypal.HostedButtons({
-                hostedButtonId: "CPVAWKUA7KQMU",
-            }).render("#paypal-container-CPVAWKUA7KQMU").catch(() => {
-                document.querySelector('#paypal-container-CPVAWKUA7KQMU + .paypal-fallback').style.display = 'block';
-            });
-        } catch (error) {
-            console.error('Error al inicializar botones de PayPal:', error);
-            document.querySelectorAll('.paypal-fallback').forEach(fallback => {
-                fallback.style.display = 'block';
-            });
+            // Guardar los enlaces actuales
+            currentPaypalLink = paypalLink;
+            currentMercadopagoLink = mercadopagoLink;
+            
+            // Mostrar modal
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
-
-        // Intentar obtener datos de LinkedIn (esto requiere configuración del SDK oficial en producción)
+        
+        // Asignar eventos a los botones de inscripción
+        enrollButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const course = button.dataset.course;
+                const usdPrice = button.dataset.usdPrice;
+                const uyuPrice = button.dataset.uyuPrice;
+                const paypalLink = button.dataset.paypalLink;
+                const mercadopagoLink = button.dataset.mercadopagoLink;
+                
+                openPaymentModal(course, usdPrice, uyuPrice, paypalLink, mercadopagoLink);
+            });
+        });
+        
+        // Evento para botón de PayPal
+        paypalButton.addEventListener('click', () => {
+            if (currentPaypalLink) {
+                window.open(currentPaypalLink, '_blank');
+                closeModal();
+            }
+        });
+        
+        // Evento para botón de MercadoPago
+        mercadopagoButton.addEventListener('click', () => {
+            if (currentMercadopagoLink) {
+                window.location.href = currentMercadopagoLink;
+                closeModal();
+            }
+        });
+        
+        // Cerrar modal
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        modalClose.addEventListener('click', closeModal);
+        
+        // Cerrar modal al hacer clic fuera del contenido
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+        
+        // Datos estáticos de LinkedIn como fallback
         try {
-            // Datos estáticos como fallback
             document.getElementById('linkedin-name').textContent = 'Pablo Del Valle';
             document.getElementById('linkedin-headline').textContent = 'Experto en Inteligencia Artificial';
             document.getElementById('linkedin-summary').textContent = 'Especialista en desarrollo de soluciones de IA aplicadas a negocios y emprendimientos. Apasionado por la enseñanza y transferencia de conocimiento tecnológico.';
