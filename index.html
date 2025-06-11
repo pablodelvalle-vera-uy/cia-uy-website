@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Mejorado -->
     <meta name="description" content="Cursos de IA en Uruguay con 50% de descuento hasta 01/08/2025. Clases online personalizadas con duración de 1 mes. ¡Inscríbete ahora!">
     <meta name="keywords" content="cursos IA Uruguay, inteligencia artificial Montevideo, machine learning, deep learning, Python, TensorFlow, PyTorch, descuento cursos IA">
     <meta name="author" content="Pablo Del Valle">
@@ -14,293 +13,194 @@
     <meta property="og:image" content="https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://cia.uy">
-    <link rel="alternate" hreflang="es" href="https://cia.uy">
-    <link rel="alternate" hreflang="es-UY" href="https://cia.uy">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com https://d3d8wlnuivx0vo.cloudfront.net https://via.placeholder.com; script-src 'self' https://cdn.matomo.cloud; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
     
     <title>CIA.UY | Cursos de Inteligencia Artificial con 50% de Descuento</title>
-    
-    <!-- Preload Recursos -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg" as="image">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
-    
-    <!-- Microdatos para SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Cursos de Inteligencia Artificial - CIA.UY",
-      "description": "Cursos personalizados de IA en Uruguay con 50% de descuento hasta 01/08/2025.",
-      "provider": {
-        "@type": "Organization",
-        "name": "CIA.UY",
-        "sameAs": "https://cia.uy"
-      },
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Introducción a la IA",
-          "price": "200.00",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Machine Learning Intermedio",
-          "price": "350.00",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "name": "Deep Learning Avanzado",
-          "price": "500.00",
-          "priceCurrency": "USD"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Pablo Del Valle",
-      "jobTitle": "Experto en Inteligencia Artificial",
-      "url": "https://www.linkedin.com/in/pablodelvalle1/",
-      "image": "https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "CIA.UY"
-      }
-    }
-    </script>
 
-    <!-- Matomo Analytics -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      var _paq = window._paq = window._paq || [];
-      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-      _paq.push(["setCookieDomain", "*.cia.uy"]);
-      _paq.push(["setDomains", ["*.cia.uy"]]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://cia.matomo.cloud/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src='https://cdn.matomo.cloud/cia.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e3a8a',
+                        discount: '#dc2626',
+                        light: '#f3f4f6',
+                        dark: '#1f2937',
+                    },
+                    boxShadow: {
+                        sm: '0 1px 2px rgba(0,0,0,0.1)',
+                        md: '0 4px 6px rgba(0,0,0,0.1)',
+                    },
+                    borderRadius: {
+                        sm: '0.25rem',
+                        md: '0.5rem',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
     </script>
-    <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://cia.matomo.cloud/matomo.php?idsite=1&rec=1" style="border:0;" alt="Matomo tracking" /></p></noscript>
-    <!-- End Matomo Code -->
-
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-    /* Variables Globales */
-    :root{--primary:#2563eb;--secondary:#1e3a8a;--discount:#dc2626;--light:#f3f4f6;--dark:#1f2937;--white:#fff;--shadow-sm:0 1px 2px rgba(0,0,0,0.1);--shadow-md:0 4px 6px rgba(0,0,0,0.1);--rounded-sm:0.25rem;--rounded-md:0.5rem;--transition:0.3s ease;}
-    /* Estilos Globales */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Poppins',sans-serif;font-size:1rem;line-height:1.6;color:var(--dark);background:var(--light);overflow-x:hidden;}
-    .container{max-width:1200px;margin:0 auto;padding:0 1rem;}
-    a{text-decoration:none;}
-    ul{list-style:none;}
-    /* Header */
-    header{background:var(--secondary);padding:1rem 0;}
-    .logo{display:flex;align-items:center;color:var(--white);font-size:1.5rem;font-weight:600;}
-    .logo-icon{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;background:var(--primary);color:var(--white);border-radius:50%;margin-right:0.5rem;}
-    .nav-menu{display:flex;gap:2rem;}
-    .nav-menu li a{color:var(--white);font-weight:500;}
-    .nav-menu li a:hover{opacity:0.8;}
-    .menu-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
-    /* Hero */
-    .hero{background:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516321310762-7f25c37d7f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp') center/cover no-repeat;padding:6rem 0;text-align:center;color:var(--white);}
-    .hero-content{max-width:800px;margin:0 auto;}
-    .hero h1{font-size:2.5rem;font-weight:700;margin-bottom:1rem;}
-    .hero p{font-size:1.25rem;margin-bottom:2rem;}
-    .discount-badge{background:var(--discount);color:var(--white);padding:0.5rem 1rem;border-radius:var(--rounded-sm);font-size:0.875rem;font-weight:600;display:inline-block;margin-bottom:1rem;}
-    /* Botones */
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:0.75rem 1.5rem;border-radius:var(--rounded-md);font-weight:500;cursor:pointer;}    .btn-primary{background:var(--primary);color:var(--white);border:none;}
-    .btn-primary:hover{background:#1d4ed8;}
-    .btn-outline{border:2px solid var(--primary);color:var(--primary);background:none;}
-    .btn-outline:hover{background:var(--primary);color:var(--white);}
-    .btn-dlocal{background:#00c4b4;color:var(--white);border:none;}
-    .btn-dlocal:hover{background:#00a89a;}
-    /* Secciones */
-    section{padding:4rem 0;}
-    .section-title{text-align:center;margin-bottom:2rem;}
-    .section-title h2{font-size:2rem;font-weight:600;}
-    .section-title p{font-size:1.125rem;color:#4b5563;}
-    /* Courses Grid */
-    .courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
-    .course-card{background:var(--white);border-radius:var(--rounded-md);overflow:hidden;box-shadow:var(--shadow-md);transition:var(--transition);}
-    .course-card:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,0.2);}
-    .course-image{position:relative;}
-    .course-image img{width:100%;height:200px;object-fit:cover;}
-    .course-badge{position:absolute;top:1rem;left:1rem;background:var(--primary);color:var(--white);padding:0.5rem 1rem;border-radius:var(--rounded-sm);font-size:0.875rem;}
-    .discount-tag{position:absolute;top:1rem;right:1rem;background:var(--discount);color:var(--white);padding:0.5rem 1rem;border-radius:var(--rounded-sm);font-size:0.875rem;}
-    .course-content{padding:1.5rem;}
-    .course-content h3{font-size:1.5rem;font-weight:600;margin-bottom:0.5rem;}
-    .course-meta{display:flex;gap:1rem;margin-bottom:0.5rem;font-size:0.875rem;color:#6b7280;}
-    .price-container{display:flex;gap:1rem;align-items:center;margin-bottom:0.5rem;}
-    .original-price{text-decoration:line-through;color:#6b7280;}
-    .course-price{font-size:1.25rem;font-weight:600;color:var(--primary);}
-    .course-features{list-style:disc;padding-left:1.5rem;margin-bottom:1rem;}
-    .payment-options{display:flex;gap:1rem;flex-direction:column;}
-    .installments-note{font-size:0.875rem;color:#6b7280;}
-    /* Test */
-    .test-container{max-width:600px;margin:0 auto;}
-    .test-progress{background:#e5e7eb;border-radius:50px;overflow:hidden;margin-bottom:2rem;}
-    .progress-bar{background:var(--primary);height:8px;transition:width var(--transition);}
-    .progress-text{display:block;text-align:center;font-size:0.875rem;}
-    .test-question{display:none;}
-    .test-question.active{display:block;}
-    .test-question h3{font-size:1.25rem;margin-bottom:1rem;}
-    .test-options{display:flex;flex-direction:column;gap:1rem;}
-    .test-options label{display:flex;align-items:center;gap:0.5rem;}
-    .test-options input[type="radio"]{width:1.25rem;height:1.25rem;}
-    .test-options input[type="radio"]:checked+span{background:var(--primary);color:var(--white);padding:0.5rem 1rem;border-radius:var(--rounded-sm);}
-    .test-navigation{display:flex;gap:1rem;justify-content:center;margin-top:2rem;}
-    /* Modalidad */
-    #modalidad .course-image img{height:250px;}
-    /* Testimonios */
-    #testimonios .course-content{text-align:center;}
-    #testimonios .course-content p{font-size:1.125rem;font-style:italic;}
-    .profile-name{font-size:1rem;font-weight:600;margin-top:1rem;}
-    /* Newsletter */
-    .newsletter-form input[type="email"]{padding:0.75rem;border:2px solid var(--primary);border-radius:var(--rounded-md);width:300px;}
-    /* Contacto */
-    .contact-container{display:grid;grid-template-columns:1fr 2fr;gap:2rem;}
-    .profile-card{text-align:center;padding:2rem;background:var(--white);border-radius:var(--rounded-md);box-shadow:var(--shadow-md);}
-    .profile-image{width:120px;height:120px;border-radius:50%;margin-bottom:1rem;object-fit:cover;transition:var(--transition);}
-    .profile-image:hover{transform:scale(1.05);box-shadow:var(--shadow-md);}
-    .profile-name{font-size:1.5rem;font-weight:600;}
-    .profile-title{font-size:1rem;color:#6b7280;}
-    .profile-bio{font-size:0.875rem;margin-bottom:1rem;}
-    .contact-options{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
-    .contact-option{background:var(--white);padding:2rem;border-radius:var(--rounded-md);box-shadow:var(--shadow-md);text-align:center;}
-    .contact-option-icon{display:flex;align-items:center;justify-content:center;width:50px;height:50px;background:var(--primary);border-radius:50%;margin:0 auto 1rem;}
-    .contact-option-title{font-size:1.25rem;font-weight:600;}
-    .contact-option-text{font-size:0.875rem;color:#6b7280;margin-bottom:1rem;}
-    /* Modal */
-    .modal{display:none;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;}
-    .modal-content{background:var(--white);padding:2rem;border-radius:var(--rounded-md);max-width:600px;width:90%;max-height:80vh;overflow-y:auto;}
-    .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
-    .modal-title{font-size:1.5rem;font-weight:600;margin-bottom:1rem;}
-    .modal-body p{margin-bottom:1rem;}
-    .modal-payment-options{display:grid;gap:1rem;}
-    .modal-payment-option{padding:1rem;border:1px solid #e5e7eb;border-radius:var(--rounded-md);text-align:center;}
-    .modal-disclaimer{font-size:0.875rem;color:#6b7280;}
-    /* Footer */
-    footer{background:var(--secondary);color:var(--white);padding:2rem 0;}
-    .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
-    .footer-logo{font-size:1.5rem;font-weight:600;color:var(--white);}
-    .footer-content h4{font-size:1.25rem;margin-bottom:1rem;}
-    .social-links{display:flex;gap:1rem;}
-    .social-link svg{transition:var(--transition);}
-    .social-link svg:hover{opacity:0.8;}
-    .copyright{text-align:center;margin-top:2rem;font-size:0.875rem;}
-    /* Sticky CTA */
-    .sticky-cta a.btn{padding:1rem 2rem;}
-    /* Back to Top */
-    .back-to-top:hover{background:#1d4ed8;}
-    /* FAQ Chatbot */
-    .faq-chatbot{z-index:1000;}
-    .faq-toggle{background:none;border:none;cursor:pointer;}
-    .faq-icon{width:50px;height:50px;border-radius:50%;box-shadow:var(--shadow-md);transition:var(--transition);}
-    .faq-icon:hover{transform:scale(1.1);}
-    .faq-content{position:absolute;bottom:70px;right:0;background:var(--white);width:300px;border-radius:var(--rounded-md);box-shadow:var(--shadow-md);display:none;}
-    .faq-header{display:flex;justify-content:space-between;align-items:center;padding:1rem;border-bottom:1px solid #e5e7eb;}
-    .faq-header h3{font-size:1.25rem;}
-    .faq-close{background:none;border:none;font-size:1rem;cursor:pointer;}
-    .faq-list{padding:1rem;}
-    .faq-item{margin-bottom:1rem;}
-    .faq-item h4{font-size:1rem;font-weight:600;}
-    .faq-item p{font-size:0.875rem;color:#4b5563;}
-    /* Media Queries */
-    @media(max-width:1024px){.contact-container{grid-template-columns:1fr;}.contact-options{grid-template-columns:1fr;}}
-    @media(max-width:768px){.nav-menu{display:none;flex-direction:column;background:var(--secondary);position:absolute;top:100%;left:0;width:100%;padding:1rem;}.nav-menu.active{display:flex;}.menu-toggle{display:block;}.hero h1{font-size:2rem;}.hero p{font-size:1rem;}.btn{padding:1rem 2.5rem;}}
-    @media(max-width:480px){.hero h1{font-size:5vw;min-font-size:1.5rem;}.section-title h2{font-size:1.5rem;}.courses-grid{grid-template-columns:1fr;}}
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1516321310762-7f25c37d7f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp') center/cover no-repeat;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Smooth transitions */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        
+        /* FAQ chatbot */
+        .faq-icon {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .faq-icon:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
-<body>
-    <!-- Header Moderno -->
-    <header>
-        <div class="container">
-            <nav role="navigation">
-                <a href="#" class="logo">
-                    <span class="logo-icon">IA</span>
-                    <span>CIA.UY</span>
-                </a>
-                <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-                <ul class="nav-menu" role="navigation">
-                    <li><a href="#inicio" aria-label="Ir a la sección de inicio">Inicio</a></li>
-                    <li><a href="#conceptos" aria-label="Ir a la sección de conceptos">Conceptos</a></li>
-                    <li><a href="#test" aria-label="Ir a la sección de test">Test</a></li>
-                    <li><a href="#cursos" aria-label="Ir a la sección de cursos">Cursos</a></li>
-                    <li><a href="#modalidad" aria-label="Ir a la sección de modalidad">Modalidad</a></li>
-                    <li><a href="#testimonios" aria-label="Ir a la sección de testimonios">Testimonios</a></li>
-                    <li><a href="#newsletter" aria-label="Ir a la sección de newsletter">Newsletter</a></li>
-                    <li><a href="#contacto" aria-label="Ir a la sección de contacto">Contacto</a></li>
+<body class="font-sans text-gray-800 bg-gray-100">
+    <!-- Header -->
+    <header class="bg-secondary text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="flex items-center text-xl font-semibold">
+                <span class="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full mr-2">IA</span>
+                <span>CIA.UY</span>
+            </a>
+            
+            <button class="md:hidden text-xl" id="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#inicio" class="font-medium hover:opacity-80">Inicio</a></li>
+                    <li><a href="#conceptos" class="font-medium hover:opacity-80">Conceptos</a></li>
+                    <li><a href="#test" class="font-medium hover:opacity-80">Test</a></li>
+                    <li><a href="#cursos" class="font-medium hover:opacity-80">Cursos</a></li>
+                    <li><a href="#modalidad" class="font-medium hover:opacity-80">Modalidad</a></li>
+                    <li><a href="#testimonios" class="font-medium hover:opacity-80">Testimonios</a></li>
+                    <li><a href="#contacto" class="font-medium hover:opacity-80">Contacto</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden container mx-auto px-4 py-2" id="mobile-menu">
+            <ul class="flex flex-col space-y-2">
+                <li><a href="#inicio" class="font-medium hover:opacity-80 block">Inicio</a></li>
+                <li><a href="#conceptos" class="font-medium hover:opacity-80 block">Conceptos</a></li>
+                <li><a href="#test" class="font-medium hover:opacity-80 block">Test</a></li>
+                <li><a href="#cursos" class="font-medium hover:opacity-80 block">Cursos</a></li>
+                <li><a href="#modalidad" class="font-medium hover:opacity-80 block">Modalidad</a></li>
+                <li><a href="#testimonios" class="font-medium hover:opacity-80 block">Testimonios</a></li>
+                <li><a href="#contacto" class="font-medium hover:opacity-80 block">Contacto</a></li>
+            </ul>
+        </div>
     </header>
 
-    <!-- Hero Section Mejorada -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <div class="discount-badge">50% DE DESCUENTO HASTA 01/08/2025</div>
-            <h1>Domina la Inteligencia Artificial con Expertos</h1>
-            <p>Cursos personalizados de 1 mes de IA en línea. Aprovecha nuestro descuento especial por tiempo limitado.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="#cursos" class="btn btn-primary">¡Inscribirme Ahora y Obtener 50% de Descuento!</a>
-                <a href="#contacto" class="btn btn-outline">Contacto</a>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section py-24 text-white text-center">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-discount text-white py-2 px-4 rounded-sm text-sm font-semibold inline-block mb-4">
+                50% DE DESCUENTO HASTA 01/08/2025
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Domina la Inteligencia Artificial con Expertos</h1>
+            <p class="text-xl mb-8">Cursos personalizados de 1 mes de IA en línea. Aprovecha nuestro descuento especial por tiempo limitado.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#cursos" class="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium transition-all">
+                    ¡Inscribirme Ahora y Obtener 50% de Descuento!
+                </a>
+                <a href="#contacto" class="border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-md font-medium transition-all">
+                    Contacto
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Sección de Conceptos -->
-    <section id="conceptos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Conceptos Clave de IA</h2>
-                <p>La Inteligencia Artificial está transformando industrias. Aprende los fundamentos que necesitas para destacarte.</p>
+    <section id="conceptos" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Conceptos Clave de IA</h2>
+                <p class="text-lg text-gray-600">La Inteligencia Artificial está transformando industrias. Aprende los fundamentos que necesitas para destacarte.</p>
             </div>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Machine Learning" loading="lazy">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Machine Learning Card -->
+                <div class="bg-white rounded-md shadow-md overflow-hidden transition-all">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Machine Learning" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
                     </div>
-                    <div class="course-content">
-                        <h3>Machine Learning</h3>
-                        <p>Algoritmos que aprenden patrones de datos para hacer predicciones y clasificaciones automáticas.</p>
-                        <ul class="course-features">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Machine Learning</h3>
+                        <p class="mb-4">Algoritmos que aprenden patrones de datos para hacer predicciones y clasificaciones automáticas.</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-2">
                             <li>Modelos supervisados y no supervisados</li>
                             <li>Preprocesamiento de datos</li>
                             <li>Evaluación de modelos</li>
                         </ul>
                     </div>
                 </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Deep Learning" loading="lazy">
+                
+                <!-- Deep Learning Card -->
+                <div class="bg-white rounded-md shadow-md overflow-hidden transition-all">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Deep Learning" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
                     </div>
-                    <div class="course-content">
-                        <h3>Deep Learning</h3>
-                        <p>Redes neuronales profundas para resolver problemas complejos como visión por computadora y NLP.</p>
-                        <ul class="course-features">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Deep Learning</h3>
+                        <p class="mb-4">Redes neuronales profundas para resolver problemas complejos como visión por computadora y NLP.</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-2">
                             <li>Arquitecturas CNN y RNN</li>
                             <li>Transfer Learning</li>
                             <li>TensorFlow y PyTorch</li>
                         </ul>
                     </div>
                 </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Procesamiento de Lenguaje Natural" loading="lazy">
+                
+                <!-- NLP Card -->
+                <div class="bg-white rounded-md shadow-md overflow-hidden transition-all">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Procesamiento de Lenguaje Natural" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
                     </div>
-                    <div class="course-content">
-                        <h3>Procesamiento de Lenguaje</h3>
-                        <p>Técnicas para que las máquinas entiendan, interpreten y generen lenguaje humano.</p>
-                        <ul class="course-features">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Procesamiento de Lenguaje</h3>
+                        <p class="mb-4">Técnicas para que las máquinas entiendan, interpreten y generen lenguaje humano.</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-2">
                             <li>Modelos Transformer</li>
                             <li>Análisis de sentimientos</li>
                             <li>Chatbots inteligentes</li>
@@ -311,255 +211,313 @@
         </div>
     </section>
 
-    <!-- Sección de Test Mejorada -->
-    <section id="test" style="background: #f9fafb;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Encuentra Tu Curso Ideal de IA</h2>
-                <p>Completa este test avanzado y recibe una recomendación personalizada en menos de 2 minutos. ¡Descubre el curso que mejor se adapta a tus habilidades y metas!</p>
+    <!-- Sección de Test -->
+    <section id="test" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Encuentra Tu Curso Ideal de IA</h2>
+                <p class="text-lg text-gray-600">Completa este test avanzado y recibe una recomendación personalizada en menos de 2 minutos.</p>
             </div>
-            <div class="test-container">
-                <div class="test-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del test">
-                    <div class="progress-bar" style="width: 0%;"></div>
-                    <span class="progress-text">Paso 1 de 6</span>
+            
+            <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-8">
+                    <div class="bg-gray-200 rounded-full overflow-hidden">
+                        <div id="progress-bar" class="bg-primary h-2" style="width: 0%"></div>
+                    </div>
+                    <span id="progress-text" class="block text-center text-sm">Paso 1 de 6</span>
                 </div>
-                <form id="course-test" aria-label="Test avanzado para elegir un curso de IA" role="form">
-                    <!-- Pregunta 1: Conocimientos previos -->
+                
+                <form id="course-test">
+                    <!-- Pregunta 1 -->
                     <div class="test-question" data-step="1">
-                        <h3 id="question1">1. ¿Cuál es tu nivel de conocimientos en programación?</h3>
-                        <div class="test-options" role="radiogroup" aria-labelledby="question1">
-                            <label>
-                                <input type="radio" name="programming" value="none" required aria-label="Sin experiencia en programación">
+                        <h3 class="text-xl mb-4">1. ¿Cuál es tu nivel de conocimientos en programación?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="programming" value="none" class="w-5 h-5" required>
                                 <span>Sin experiencia en programación</span>
                             </label>
-                            <label>
-                                <input type="radio" name="programming" value="basic" aria-label="Programación básica">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="programming" value="basic" class="w-5 h-5">
                                 <span>Conozco conceptos básicos (variables, funciones, bucles)</span>
                             </label>
-                            <label>
-                                <input type="radio" name="programming" value="intermediate" aria-label="Programación intermedia">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="programming" value="intermediate" class="w-5 h-5">
                                 <span>Tengo experiencia intermedia (POO, estructuras de datos)</span>
                             </label>
-                            <label>
-                                <input type="radio" name="programming" value="advanced" aria-label="Programación avanzada">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="programming" value="advanced" class="w-5 h-5">
                                 <span>Soy avanzado (proyectos complejos, algoritmos avanzados)</span>
                             </label>
                         </div>
                     </div>
-                    <!-- Pregunta 2: Experiencia con IA -->
-                    <div class="test-question" data-step="2" style="display: none;">
-                        <h3 id="question2">2. ¿Has trabajado con herramientas o frameworks de IA?</h3>
-                        <div class="test-options" role="radiogroup" aria-labelledby="question2">
-                            <label>
-                                <input type="radio" name="ai_tools" value="none" required aria-label="Sin experiencia con herramientas de IA">
+                    
+                    <!-- Pregunta 2 -->
+                    <div class="test-question hidden" data-step="2">
+                        <h3 class="text-xl mb-4">2. ¿Has trabajado con herramientas o frameworks de IA?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="ai_tools" value="none" class="w-5 h-5" required>
                                 <span>No, nunca he usado herramientas de IA</span>
                             </label>
-                            <label>
-                                <input type="radio" name="ai_tools" value="basic" aria-label="Uso básico de herramientas de IA">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="ai_tools" value="basic" class="w-5 h-5">
                                 <span>Sí, he usado herramientas básicas (APIs, plataformas no-code)</span>
                             </label>
-                            <label>
-                                <input type="radio" name="ai_tools" value="intermediate" aria-label="Uso intermedio de herramientas de IA">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="ai_tools" value="intermediate" class="w-5 h-5">
                                 <span>Sí, he trabajado con Python, NumPy o Scikit-learn</span>
                             </label>
-                            <label>
-                                <input type="radio" name="ai_tools" value="advanced" aria-label="Uso avanzado de herramientas de IA">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="ai_tools" value="advanced" class="w-5 h-5">
                                 <span>Sí, tengo experiencia con TensorFlow, PyTorch o similares</span>
                             </label>
                         </div>
                     </div>
-                    <!-- Pregunta 3: Intereses en IA -->
-                    <div class="test-question" data-step="3" style="display: none;">
-                        <h3 id="question3">3. ¿Qué aplicación de IA te interesa más?</h3>
-                        <div class="test-options" role="radiogroup" aria-labelledby="question3">
-                            <label>
-                                <input type="radio" name="interest" value="general" required aria-label="Conceptos generales de IA">
+                    
+                    <!-- Más preguntas aquí -->
+                    <!-- Pregunta 3 -->
+                    <div class="test-question hidden" data-step="3">
+                        <h3 class="text-xl mb-4">3. ¿Qué aplicación de IA te interesa más?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="interest" value="general" class="w-5 h-5" required>
                                 <span>Conceptos básicos de IA</span>
                             </label>
-                            <label>
-                                <input type="radio" name="interest" value="vision" aria-label="Visión por computadora">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="interest" value="vision" class="w-5 h-5">
                                 <span>Visión por computadora</span>
                             </label>
-                            <label>
-                                <input type="radio" name="interest" value="nlp" aria-label="Procesamiento de lenguaje natural">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="interest" value="nlp" class="w-5 h-5">
                                 <span>Procesamiento de lenguaje natural (NLP)</span>
                             </label>
-                            <label>
-                                <input type="radio" name="interest" value="predictive" aria-label="Modelos predictivos">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="interest" value="predictive" class="w-5 h-5">
                                 <span>Modelos predictivos</span>
                             </label>
                         </div>
                     </div>
-                    <!-- Pregunta 4: Objetivos -->
-                    <div class="test-question" data-step="4" style="display: none;">
-                        <h3 id="question4">4. ¿Cuál es tu objetivo principal al tomar el curso?</h3>
-                        <div class="test-options" role="radiogroup" aria-labelledby="question4">
-                            <label>
-                                <input type="radio" name="goal" value="learn" required aria-label="Aprender fundamentos">
+                    
+                    <!-- Pregunta 4 -->
+                    <div class="test-question hidden" data-step="4">
+                        <h3 class="text-xl mb-4">4. ¿Cuál es tu objetivo principal al tomar el curso?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="goal" value="learn" class="w-5 h-5" required>
                                 <span>Aprender los fundamentos de IA para mi desarrollo personal</span>
                             </label>
-                            <label>
-                                <input type="radio" name="goal" value="apply" aria-label="Aplicar en proyectos">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="goal" value="apply" class="w-5 h-5">
                                 <span>Implementar IA en mis proyectos o trabajo actual</span>
                             </label>
-                            <label>
-                                <input type="radio" name="goal" value="specialize" aria-label="Especializarme en IA">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="goal" value="specialize" class="w-5 h-5">
                                 <span>Convertirme en un especialista en IA</span>
                             </label>
                         </div>
                     </div>
-                    <!-- Pregunta 5: Disponibilidad -->
-                    <div class="test-question" data-step="5" style="display: none;">
-                        <h3 id="question5">5. ¿Cuánto tiempo puedes dedicar semanalmente al curso?</h3>
-                        <div class="test-options" role="radiogroup" aria-labelledby="question5">
-                            <label>
-                                <input type="radio" name="availability" value="low" required aria-label="2-4 horas semanales">
+                    
+                    <!-- Pregunta 5 -->
+                    <div class="test-question hidden" data-step="5">
+                        <h3 class="text-xl mb-4">5. ¿Cuánto tiempo puedes dedicar semanalmente al curso?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="availability" value="low" class="w-5 h-5" required>
                                 <span>2-4 horas por semana</span>
                             </label>
-                            <label>
-                                <input type="radio" name="availability" value="medium" aria-label="4-6 horas semanales">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="availability" value="medium" class="w-5 h-5">
                                 <span>4-6 horas por semana</span>
                             </label>
-                            <label>
-                                <input type="radio" name="availability" value="high" aria-label="Más de 6 horas semanales">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="availability" value="high" class="w-5 h-5">
                                 <span>Más de 6 horas por semana</span>
                             </label>
                         </div>
                     </div>
-                    <!-- Pregunta 6: Estilo de Aprendizaje -->
-                    <div class="test-question" data-step="6" style="display: none;">
-                        <h3 id="question6">6. ¿Cuál es tu estilo de aprendizaje preferido?</h3>
-                        <div class="test-options" role="radiogroup" aria-labelledby="question6">
-                            <label>
-                                <input type="radio" name="learning_style" value="practical" required aria-label="Aprendizaje práctico">
+                    
+                    <!-- Pregunta 6 -->
+                    <div class="test-question hidden" data-step="6">
+                        <h3 class="text-xl mb-4">6. ¿Cuál es tu estilo de aprendizaje preferido?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="learning_style" value="practical" class="w-5 h-5" required>
                                 <span>Práctico (proyectos y ejercicios)</span>
                             </label>
-                            <label>
-                                <input type="radio" name="learning_style" value="theoretical" aria-label="Aprendizaje teórico">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="learning_style" value="theoretical" class="w-5 h-5">
                                 <span>Teórico (conceptos y explicaciones)</span>
                             </label>
-                            <label>
-                                <input type="radio" name="learning_style" value="mixed" aria-label="Aprendizaje mixto">
+                            <label class="flex items-center space-x-2">
+                                <input type="radio" name="learning_style" value="mixed" class="w-5 h-5">
                                 <span>Mixto (teoría y práctica)</span>
                             </label>
                         </div>
                     </div>
-                    <div class="test-navigation">
-                        <button type="button" id="prev-step" class="btn btn-outline" style="display: none;">Anterior</button>
-                        <button type="button" id="next-step" class="btn btn-primary">Siguiente</button>
-                        <button type="submit" id="submit-test" class="btn btn-primary" style="display: none;">Ver Recomendación</button>
-                        <button type="button" id="reset-test" class="btn btn-outline">Reiniciar Test</button>
+                    
+                    <div class="flex justify-center space-x-4 mt-8">
+                        <button type="button" id="prev-step" class="border-2 border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium hidden">
+                            Anterior
+                        </button>
+                        <button type="button" id="next-step" class="bg-primary hover:bg-blue-700 text-white py-2 px-4 rounded-md font-medium">
+                            Siguiente
+                        </button>
+                        <button type="submit" id="submit-test" class="bg-primary hover:bg-blue-700 text-white py-2 px-4 rounded-md font-medium hidden">
+                            Ver Recomendación
+                        </button>
+                        <button type="button" id="reset-test" class="border-2 border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium">
+                            Reiniciar Test
+                        </button>
                     </div>
                 </form>
-                <div id="test-result" style="display: none; text-align: center; margin-top: 2rem; background: #fff; padding: 2rem; border-radius: var(--rounded-md); box-shadow: var(--shadow-md);">
-                    <h3>Te recomendamos: <span id="recommended-course"></span></h3>
-                    <p id="result-description"></p>
-                    <p id="result-justification"></p>
-                    <a id="result-enroll-btn" href="#" class="btn btn-primary">¡Inscribirme Ahora y Obtener 50% de Descuento!</a>
+                
+                <div id="test-result" class="hidden text-center mt-8 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">Te recomendamos: <span id="recommended-course" class="text-primary"></span></h3>
+                    <p id="result-description" class="mb-4"></p>
+                    <p id="result-justification" class="mb-6"></p>
+                    <a id="result-enroll-btn" href="#" class="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium inline-block">
+                        ¡Inscribirme Ahora y Obtener 50% de Descuento!
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección de Cursos -->
-    <section id="cursos" style="background: #f3f4f6;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nuestros Cursos</h2>
-                <p>Programa especializado de 1 mes de duración. Clases online interactivas vía Zoom con 50% de descuento hasta el 01/08/2025.</p>
+    <section id="cursos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Nuestros Cursos</h2>
+                <p class="text-lg text-gray-600">Programa especializado de 1 mes de duración. Clases online interactivas vía Zoom con 50% de descuento hasta el 01/08/2025.</p>
             </div>
-            <div class="courses-grid">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Curso: Introducción a la IA -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Introducción a la IA" loading="lazy">
-                        <span class="course-badge">Popular</span>
-                        <span class="discount-tag">50% OFF</span>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Introducción a la IA" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <span class="absolute top-2 left-2 bg-primary text-white py-1 px-3 rounded-sm text-sm">Popular</span>
+                        <span class="absolute top-2 right-2 bg-discount text-white py-1 px-3 rounded-sm text-sm">50% OFF</span>
                     </div>
-                    <div class="course-content">
-                        <h3>Introducción a la IA</h3>
-                        <div class="course-meta">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Introducción a la IA</h3>
+                        <div class="flex space-x-4 text-sm text-gray-500 mb-2">
                             <span>📅 1 mes (8 horas)</span>
                             <span>🕒 Sábados 8:00-10:00</span>
                         </div>
-                        <div class="price-container">
-                            <span class="original-price">$400.00 USD (~16,000 UYU)</span>
-                            <span class="course-price">$200.00 USD (~8,000 UYU)</span>
+                        <div class="flex items-center space-x-4 mb-2">
+                            <span class="line-through text-gray-500">$400.00 USD (~16,000 UYU)</span>
+                            <span class="text-xl font-semibold text-primary">$200.00 USD (~8,000 UYU)</span>
                         </div>
-                        <p>Curso personalizado para principiantes, enfocado en tus intereses específicos.</p>
-                        <ul class="course-features">
+                        <p class="mb-4">Curso personalizado para principiantes, enfocado en tus intereses específicos.</p>
+                        <ul class="list-disc pl-5 mb-6 space-y-2">
                             <li>Fundamentos de IA y ML</li>
                             <li>Prompt engineering básico</li>
                             <li>Python básico para IA</li>
                             <li>Proyecto personalizado</li>
                             <li>Soporte continuo</li>
                         </ul>
-                        <div class="payment-options">
-                            <a href="#preview-modal" class="btn btn-outline" data-modal="preview-modal-intro">Ver Vista Previa del Curso</a>
-                            <button class="btn btn-primary enroll-btn" data-course="Introducción a la IA" data-usd-price="$200.00 USD" data-dlocal-link="https://checkout.dlocalgo.com/validate/recurring/Rpq3k6yHStKB59JyRV9Fzk4wDO3JF6iG">¡Inscribirme Ahora y Obtener 50% de Descuento! <span style="color: var(--discount);">*</span></button>
-                            <p class="installments-note"><span>*</span> Hasta 12 cuotas sin interés</p>
+                        <div class="space-y-3">
+                            <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium preview-btn" 
+                                    data-modal="preview-modal-intro">
+                                Ver Vista Previa del Curso
+                            </button>
+                            <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium enroll-btn" 
+                                    data-course="Introducción a la IA" 
+                                    data-usd-price="$200.00 USD" 
+                                    data-dlocal-link="https://checkout.dlocalgo.com/validate/recurring/Rpq3k6yHStKB59JyRV9Fzk4wDO3JF6iG">
+                                ¡Inscribirme Ahora y Obtener 50% de Descuento! <span class="text-discount">*</span>
+                            </button>
+                            <p class="text-sm text-gray-500"><span class="text-discount">*</span> Hasta 12 cuotas sin interés</p>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Curso: Machine Learning Intermedio -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Machine Learning" loading="lazy">
-                        <span class="discount-tag">50% OFF</span>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Machine Learning" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <span class="absolute top-2 right-2 bg-discount text-white py-1 px-3 rounded-sm text-sm">50% OFF</span>
                     </div>
-                    <div class="course-content">
-                        <h3>Machine Learning Intermedio</h3>
-                        <div class="course-meta">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Machine Learning Intermedio</h3>
+                        <div class="flex space-x-4 text-sm text-gray-500 mb-2">
                             <span>📅 1 mes (12 horas)</span>
                             <span>🕒 Sábados 10:30-13:30</span>
                         </div>
-                        <div class="price-container">
-                            <span class="original-price">$700.00 USD (~28,000 UYU)</span>
-                            <span class="course-price">$350.00 USD (~14,000 UYU)</span>
+                        <div class="flex items-center space-x-4 mb-2">
+                            <span class="line-through text-gray-500">$700.00 USD (~28,000 UYU)</span>
+                            <span class="text-xl font-semibold text-primary">$350.00 USD (~14,000 UYU)</span>
                         </div>
-                        <p>Aprende a implementar algoritmos avanzados en tus propios proyectos.</p>
-                        <ul class="course-features">
+                        <p class="mb-4">Aprende a implementar algoritmos avanzados en tus propios proyectos.</p>
+                        <ul class="list-disc pl-5 mb-6 space-y-2">
                             <li>Regresión y clasificación</li>
                             <li>Feature engineering</li>
                             <li>Optimización de modelos</li>
                             <li>Prompt engineering intermedio</li>
                             <li>Proyecto personal</li>
                         </ul>
-                        <div class="payment-options">
-                            <a href="#preview-modal" class="btn btn-outline" data-modal="preview-modal-ml">Ver Vista Previa del Curso</a>
-                            <button class="btn btn-primary enroll-btn" data-course="Machine Learning Intermedio" data-usd-price="$350.00 USD" data-dlocal-link="https://checkout.dlocalgo.com/validate/recurring/YYIFY8hmVOzqYbCUUXV6wiVqdWH2IiBY">¡Inscribirme Ahora y Obtener 50% de Descuento! <span style="color: var(--discount);">*</span></button>
-                            <p class="installments-note"><span>*</span> Hasta 12 cuotas sin interés</p>
+                        <div class="space-y-3">
+                            <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium preview-btn" 
+                                    data-modal="preview-modal-ml">
+                                Ver Vista Previa del Curso
+                            </button>
+                            <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium enroll-btn" 
+                                    data-course="Machine Learning Intermedio" 
+                                    data-usd-price="$350.00 USD" 
+                                    data-dlocal-link="https://checkout.dlocalgo.com/validate/recurring/YYIFY8hmVOzqYbCUUXV6wiVqdWH2IiBY">
+                                ¡Inscribirme Ahora y Obtener 50% de Descuento! <span class="text-discount">*</span>
+                            </button>
+                            <p class="text-sm text-gray-500"><span class="text-discount">*</span> Hasta 12 cuotas sin interés</p>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Curso: Deep Learning Avanzado -->
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Deep Learning" loading="lazy">
-                        <span class="discount-tag">50% OFF</span>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Deep Learning" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <span class="absolute top-2 right-2 bg-discount text-white py-1 px-3 rounded-sm text-sm">50% OFF</span>
                     </div>
-                    <div class="course-content">
-                        <h3>Deep Learning Avanzado</h3>
-                        <div class="course-meta">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Deep Learning Avanzado</h3>
+                        <div class="flex space-x-4 text-sm text-gray-500 mb-2">
                             <span>📅 1 mes (16 horas)</span>
                             <span>🕒 Sábados 14:30-18:30</span>
                         </div>
-                        <div class="price-container">
-                            <span class="original-price">$1000.00 USD (~40,000 UYU)</span>
-                            <span class="course-price">$500.00 USD (~20,000 UYU)</span>
+                        <div class="flex items-center space-x-4 mb-2">
+                            <span class="line-through text-gray-500">$1000.00 USD (~40,000 UYU)</span>
+                            <span class="text-xl font-semibold text-primary">$500.00 USD (~20,000 UYU)</span>
                         </div>
-                        <p>Domina las técnicas más avanzadas de IA para problemas complejos.</p>
-                        <ul class="course-features">
+                        <p class="mb-4">Domina las técnicas más avanzadas de IA para problemas complejos.</p>
+                        <ul class="list-disc pl-5 mb-6 space-y-2">
                             <li>Redes neuronales profundas</li>
                             <li>Computer Vision</li>
                             <li>NLP con Transformers</li>
                             <li>Prompt engineering avanzado</li>
                             <li>Proyecto final</li>
                         </ul>
-                        <div class="payment-options">
-                            <a href="#preview-modal" class="btn btn-outline" data-modal="preview-modal-dl">Ver Vista Previa del Curso</a>
-                            <button class="btn btn-primary enroll-btn" data-course="Deep Learning Avanzado" data-usd-price="$500.00 USD" data-dlocal-link="https://checkout.dlocalgo.com/validate/recurring/KOuaALrUOYWTMS89g2fcEaFQMlsKuehs">¡Inscribirme Ahora y Obtener 50% de Descuento! <span style="color: var(--discount);">*</span></button>
-                            <p class="installments-note"><span>*</span> Hasta 12 cuotas sin interés</p>
+                        <div class="space-y-3">
+                            <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-md font-medium preview-btn" 
+                                    data-modal="preview-modal-dl">
+                                Ver Vista Previa del Curso
+                            </button>
+                            <button class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium enroll-btn" 
+                                    data-course="Deep Learning Avanzado" 
+                                    data-usd-price="$500.00 USD" 
+                                    data-dlocal-link="https://checkout.dlocalgo.com/validate/recurring/KOuaALrUOYWTMS89g2fcEaFQMlsKuehs">
+                                ¡Inscribirme Ahora y Obtener 50% de Descuento! <span class="text-discount">*</span>
+                            </button>
+                            <p class="text-sm text-gray-500"><span class="text-discount">*</span> Hasta 12 cuotas sin interés</p>
                         </div>
                     </div>
                 </div>
@@ -568,87 +526,105 @@
     </section>
 
     <!-- Sección de Testimonios -->
-    <section id="testimonios" style="background: #f9fafb;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Lo que Dicen Nuestros Estudiantes</h2>
-                <p>Descubre cómo nuestros cursos han transformado carreras.</p>
+    <section id="testimonios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Lo que Dicen Nuestros Estudiantes</h2>
+                <p class="text-lg text-gray-600">Descubre cómo nuestros cursos han transformado carreras.</p>
             </div>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-content">
-                        <p>"El curso de Machine Learning me ayudó a implementar IA en mi startup. ¡Recomendado!"</p>
-                        <p class="profile-name">Ana Gómez, Emprendedora</p>
-                    </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-lg italic mb-4">"El curso de Machine Learning me ayudó a implementar IA en mi startup. ¡Recomendado!"</p>
+                    <p class="font-semibold">Ana Gómez, Emprendedora</p>
                 </div>
-                <div class="course-card">
-                    <div class="course-content">
-                        <p>"Las clases personalizadas me permitieron avanzar a mi ritmo. Excelente soporte."</p>
-                        <p class="profile-name">Juan Pérez, Desarrollador</p>
-                    </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <p class="text-lg italic mb-4">"Las clases personalizadas me permitieron avanzar a mi ritmo. Excelente soporte."</p>
+                    <p class="font-semibold">Juan Pérez, Desarrollador</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección de Newsletter -->
-    <section id="newsletter">
-        <div class="container">
-            <div class="section-title">
-                <h2>Únete a Nuestra Comunidad</h2>
-                <p>Recibe actualizaciones sobre IA y descuentos exclusivos.</p>
+    <section id="newsletter" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Únete a Nuestra Comunidad</h2>
+                <p class="text-lg text-gray-600">Recibe actualizaciones sobre IA y descuentos exclusivos.</p>
             </div>
-            <form class="newsletter-form" style="display: flex; gap: 1rem; justify-content: center;">
-                <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico para newsletter">
-                <button type="submit" class="btn btn-primary">Suscribirme</button>
+            
+            <form class="flex flex-col sm:flex-row justify-center gap-3">
+                <input type="email" 
+                       placeholder="Tu correo electrónico" 
+                       required
+                       class="border-2 border-primary py-3 px-4 rounded-md w-full sm:w-80">
+                <button type="submit" class="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium">
+                    Suscribirme
+                </button>
             </form>
         </div>
     </section>
 
     <!-- Sección de Modalidad -->
-    <section id="modalidad">
-        <div class="container">
-            <div class="section-title">
-                <h2>Modalidad de Enseñanza</h2>
-                <p>Nuestro enfoque práctico y personalizado garantiza que obtengas el máximo valor de cada clase.</p>
+    <section id="modalidad" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Modalidad de Enseñanza</h2>
+                <p class="text-lg text-gray-600">Nuestro enfoque práctico y personalizado garantiza que obtengas el máximo valor de cada clase.</p>
             </div>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Clases Personalizadas" loading="lazy">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Clases personalizadas -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Clases Personalizadas" 
+                             class="w-full h-56 object-cover"
+                             loading="lazy">
                     </div>
-                    <div class="course-content">
-                        <h3>Clases 100% Personalizadas</h3>
-                        <p>Adaptamos el contenido a tus objetivos específicos y nivel de conocimiento.</p>
-                        <ul class="course-features">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Clases 100% Personalizadas</h3>
+                        <p class="mb-4">Adaptamos el contenido a tus objetivos específicos y nivel de conocimiento.</p>
+                        <ul class="list-disc pl-5 space-y-2">
                             <li>Enfoque en tus proyectos personales</li>
                             <li>Ritmo de aprendizaje adaptado</li>
                             <li>Tutorías individuales</li>
                         </ul>
                     </div>
                 </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Duración 1 Mes" loading="lazy">
+                
+                <!-- Duración 1 mes -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Duración 1 Mes" 
+                             class="w-full h-56 object-cover"
+                             loading="lazy">
                     </div>
-                    <div class="course-content">
-                        <h3>Duración de 1 Mes</h3>
-                        <p>Cursos intensivos diseñados para maximizar tu aprendizaje en poco tiempo.</p>
-                        <ul class="course-features">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Duración de 1 Mes</h3>
+                        <p class="mb-4">Cursos intensivos diseñados para maximizar tu aprendizaje en poco tiempo.</p>
+                        <ul class="list-disc pl-5 space-y-2">
                             <li>4 a 8 sesiones según el curso</li>
                             <li>Horarios flexibles</li>
                             <li>Acceso a material permanente</li>
                         </ul>
                     </div>
                 </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" alt="Descuento Especial" loading="lazy">
+                
+                <!-- 50% de descuento -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
+                             alt="Descuento Especial" 
+                             class="w-full h-56 object-cover"
+                             loading="lazy">
                     </div>
-                    <div class="course-content">
-                        <h3>50% de Descuento</h3>
-                        <p>Aprovecha nuestra promoción especial válida hasta el 01/08/2025.</p>
-                        <ul class="course-features">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">50% de Descuento</h3>
+                        <p class="mb-4">Aprovecha nuestra promoción especial válida hasta el 01/08/2025.</p>
+                        <ul class="list-disc pl-5 space-y-2">
                             <li>Precios con descuento aplicado</li>
                             <li>Mismo contenido y calidad</li>
                             <li>Certificado de finalización</li>
@@ -660,329 +636,576 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section id="contacto">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contacto</h2>
-                <p>¿Tienes dudas sobre nuestros cursos? Contáctanos directamente por WhatsApp o email.</p>
+    <section id="contacto" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold">Contacto</h2>
+                <p class="text-lg text-gray-600">¿Tienes dudas sobre nuestros cursos? Contáctanos directamente por WhatsApp o email.</p>
             </div>
-            <div class="contact-container">
-                <div class="profile-card">
-                    <img src="https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg" alt="Foto de perfil de Pablo Del Valle, experto en Inteligencia Artificial" class="profile-image" loading="lazy" onerror="this.src='https://via.placeholder.com/120';">
-                    <h3 class="profile-name" id="linkedin-name">Pablo Del Valle</h3>
-                    <p class="profile-title" id="linkedin-headline">Experto en Inteligencia Artificial</p>
-                    <p class="profile-bio" id="linkedin-summary">Especialista en desarrollo de soluciones de IA aplicadas a negocios y emprendimientos.</p>
-                    <a href="https://www.linkedin.com/in/pablodelvalle1/" target="_blank" class="btn btn-primary">Ver Perfil Completo</a>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Profile Card -->
+                <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                    <img src="https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg" 
+                         alt="Foto de perfil de Pablo Del Valle, experto en Inteligencia Artificial" 
+                         class="w-24 h-24 rounded-full mx-auto mb-4 object-cover transition-all"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/120'">
+                    <h3 class="text-2xl font-semibold">Pablo Del Valle</h3>
+                    <p class="text-gray-600 mb-4">Experto en Inteligencia Artificial</p>
+                    <p class="text-sm mb-6">Especialista en desarrollo de soluciones de IA aplicadas a negocios y emprendimientos.</p>
+                    <a href="https://www.linkedin.com/in/pablodelvalle1/" 
+                       target="_blank" 
+                       class="bg-primary hover:bg-blue-700 text-white py-2 px-6 rounded-md font-medium inline-block">
+                        Ver Perfil Completo
+                    </a>
                 </div>
-                <div class="contact-options">
-                    <div class="contact-option">
-                        <div class="contact-option-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                
+                <!-- Contact Options -->
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- WhatsApp -->
+                    <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                        <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white">
+                            <i class="fab fa-whatsapp text-2xl"></i>
                         </div>
-                        <h3 class="contact-option-title">WhatsApp Directo</h3>
-                        <p class="contact-option-text">Resuelve tus dudas al instante con nuestro equipo</p>
-                        <a href="https://wa.me/59896308883" class="btn btn-primary" style="width: 100%;">Chatear por WhatsApp</a>
+                        <h3 class="text-xl font-semibold mb-2">WhatsApp Directo</h3>
+                        <p class="text-sm text-gray-600 mb-4">Resuelve tus dudas al instante con nuestro equipo</p>
+                        <a href="https://wa.me/59896308883" 
+                           class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium block">
+                            Chatear por WhatsApp
+                        </a>
                     </div>
-                    <div class="contact-option">
-                        <div class="contact-option-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                    
+                    <!-- Email -->
+                    <div class="bg-white rounded-lg shadow-md p-8 text-center">
+                        <div class="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white">
+                            <i class="fas fa-envelope text-xl"></i>
                         </div>
-                        <h3 class="contact-option-title">Correo Electrónico</h3>
-                        <p class="contact-option-text">Escríbenos y te responderemos en menos de 24 horas</p>
-                        <a href="mailto:soporte@cia.uy" class="btn btn-outline" style="width: 100%; color: var(--dark); border-color: var(--primary);">Enviar Email</a>
+                        <h3 class="text-xl font-semibold mb-2">Correo Electrónico</h3>
+                        <p class="text-sm text-gray-600 mb-4">Escríbenos y te responderemos en menos de 24 horas</p>
+                        <a href="mailto:soporte@cia.uy" 
+                           class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-md font-medium block">
+                            Enviar Email
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modales -->
-    <!-- Modal for Payment -->
-    <div class="modal" id="payment-modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar modal">✕</button>
-            <h2 class="modal-title">Inscribirte en <span id="modal-course-name"></span></h2>
-            <div class="modal-payment-options">
-                <div class="modal-payment-option">
-                    <h3>Pagar con dLocal</h3>
-                    <p>Pago en hasta 12 cuotas sin interés de <span id="modal-usd-installments"></span> (Total: <span id="modal-usd-price"></span>)</p>
-                    <button id="dlocal-button" class="btn btn-dlocal">Pagar en USD con dLocal</button>
-                </div>
-            </div>
-            <div class="modal-disclaimer">
-                <p>Una vez procesado el pago correctamente, recibirás las credenciales para acceder al curso por correo electrónico. Los cursos inician el primer sábado de cada mes. Si el curso es un regalo, puedes compartir las credenciales con otra persona, pero cada pago corresponde a una sola persona. Para inscripciones de múltiples personas, realiza pagos separados o contáctanos en <a href="mailto:soporte@cia.uy" aria-label="Enviar correo a soporte">soporte@cia.uy</a> para una oferta personalizada.</p>
-                <p class="payment-failure-note" style="margin-top: 1rem; font-weight: 600; color: var(--discount);">
-                    ¿Problemas con el pago? Contáctanos por 
-                    <a href="https://wa.me/59896308883" class="btn btn-primary" style="display: inline-flex; padding: 0.5rem 1rem; margin: 0 0.25rem;" aria-label="Contactar por WhatsApp por problema con el pago">WhatsApp</a> 
-                    o por 
-                    <a href="mailto:soporte@cia.uy" class="btn btn-outline" style="display: inline-flex; padding: 0.5rem 1rem; margin: 0 0.25rem; color: var(--dark); border-color: var(--primary);" aria-label="Enviar correo por problema con el pago">correo</a>.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Privacy Policy -->
-    <div class="modal" id="privacy-modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar modal de política de privacidad">✕</button>
-            <h2 class="modal-title">Política de Privacidad</h2>
-            <div class="modal-body">
-                <p>En CIA.UY, respetamos tu privacidad y cumplimos con la normativa de protección de datos de Uruguay (Ley Nº 18.331). A continuación, te explicamos cómo recopilamos, usamos y protegemos tu información personal.</p>
-                <h3>1. Responsable del Tratamiento de Datos</h3>
-                <p>CIA.UY, operado por Pablo Del Valle Riva (CHE-457.894.567 MWST, registrado en Suiza), es el responsable del tratamiento de tus datos personales. Puedes contactarnos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a> o al +598 96 308 883.</p>
-                <h3>2. Datos Recopilados</h3>
-                <p>Recopilamos la siguiente información:</p>
-                <ul class="course-features">
-                    <li><strong>Datos de contacto:</strong> Nombre, correo electrónico, número de teléfono (por ejemplo, al contactarnos vía WhatsApp o email).</li>
-                    <li><strong>Datos de pago:</strong> Información necesaria para procesar pagos a través de dLocal (como datos de tarjeta o métodos de pago locales), que se gestiona directamente por dLocal conforme a sus políticas.</li>
-                    <li><strong>Datos de uso:</strong> Información sobre tu interacción con nuestro sitio web, recopilada a través de Matomo Analytics (como páginas visitadas, tiempo en el sitio).</li>
-                    <li><strong>Datos del test:</strong> Respuestas al test de recomendación de cursos, utilizadas únicamente para personalizar tu experiencia.</li>
-                </ul>
-                <h3>3. Finalidad del Tratamiento</h3>
-                <p>Usamos tus datos para:</p>
-                <ul class="course-features">
-                    <li>Procesar inscripciones y pagos de cursos.</li>
-                    <li>Enviar comunicaciones relacionadas con los cursos (credenciales, recordatorios).</li>
-                    <li>Responder a consultas a través de WhatsApp, email o formularios.</li>
-                    <li>Mejorar nuestro sitio web mediante análisis anónimo (Matomo).</li>
-                    <li>Personalizar recomendaciones basadas en el test.</li>
-                </ul>
-                <h3>4. Base Legal</h3>
-                <p>El tratamiento de datos se basa en:</p>
-                <ul class="course-features">
-                    <li>Tu consentimiento explícito (por ejemplo, al completar el test o enviar un formulario).</li>
-                    <li>Ejecución de un contrato (inscripción a cursos).</li>
-                    <li>Intereses legítimos (mejorar servicios, análisis de uso anónimo).</li>
-                </ul>
-                <h3>5. Compartición de Datos</h3>
-                <p>Compartimos datos con:</p>
-                <ul class="course-features">
-                    <li><strong>dLocal:</strong> Para procesar pagos. dLocal actúa como procesador de datos y cumple con estándares de seguridad (PCI DSS).</li>
-                    <li><strong>Matomo Analytics:</strong> Datos anónimos para análisis de uso del sitio, alojados en servidores seguros (cia.matomo.cloud).</li>
-                </ul>
-                <p>No compartimos datos con terceros no autorizados, salvo obligación legal.</p>
-                <h3>6. Seguridad de los Datos</h3>
-                <p>Implementamos medidas técnicas y organizativas para proteger tus datos, como encriptación SSL y almacenamiento seguro. dLocal utiliza protocolos PCI DSS para pagos.</p>
-                <h3>7. Derechos del Titular de los Datos</h3>
-                <p>De acuerdo con la Ley Nº 18.331, tienes derecho a:</p>
-                <ul class="course-features">
-                    <li>Acceder a tus datos personales.</li>
-                    <li>Rectificar datos inexactos.</li>
-                    <li>Solicitar la eliminación de datos.</li>
-                    <li>Oponerte al tratamiento.</li>
-                    <li>Revocar tu consentimiento.</li>
-                </ul>
-                <p>Para ejercer estos derechos, contáctanos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a>. Responderemos en un plazo máximo de 30 días.</p>
-                <h3>8. Conservación de Datos</h3>
-                <p>Conservamos tus datos durante el tiempo necesario para cumplir con las finalidades descritas o según lo exija la ley. Los datos de pago procesados por dLocal se gestionan según sus políticas de retención.</p>
-                <h3>9. Cambios en la Política</h3>
-                <p>Nos reservamos el derecho de actualizar esta política. Los cambios se publicarán en esta página con la fecha de última actualización: 11 de junio de 2025.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Refund Policy -->
-    <div class="modal" id="refund-modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar modal de política de reembolso">✕</button>
-            <h2 class="modal-title">Política de Reembolso</h2>
-            <div class="modal-body">
-                <p>En CIA.UY, queremos que estés satisfecho con tu experiencia. A continuación, detallamos las condiciones para solicitar reembolsos, en cumplimiento con la normativa uruguaya (Ley Nº 17.250) y los términos de nuestro procesador de pagos, dLocal.</p>
-                <h3>1. Condiciones para Reembolsos</h3>
-                <p>Puedes solicitar un reembolso bajo las siguientes condiciones:</p>
-                <ul class="course-features">
-                    <li><strong>Cancelación antes del inicio:</strong> Si cancelas tu inscripción hasta 7 días naturales antes del inicio del curso, recibirás un reembolso completo del monto pagado.</li>
-                    <li><strong>Cancelación durante el curso:</strong> Si cancelas dentro de los primeros 3 días hábiles desde el inicio del curso, recibirás un reembolso del 50% del monto pagado, siempre que no hayas accedido a más del 25% del contenido del curso.</li>
-                    <li><strong>No asistencia:</strong> La no asistencia al curso sin notificación previa no da derecho a reembolso.</li>
-                    <li><strong>Problemas técnicos:</strong> Si no puedes acceder al curso por problemas técnicos atribuibles a CIA.UY (por ejemplo, fallos en Zoom), te ofreceremos un reembolso completo o una solución alternativa.</li>
-                </ul>
-                <h3>2. Proceso de Reembolso</h3>
-                <p>Para solicitar un reembolso:</p>
-                <ul class="course-features">
-                    <li>Envía un correo a <a href="mailto:soporte@cia.uy">soporte@cia.uy</a> indicando tu nombre, curso inscrito y motivo de la cancelación.</li>
-                    <li>Procesaremos la solicitud en un plazo máximo de 5 días hábiles.</li>
-                    <li>Los reembolsos se realizarán a través de dLocal al método de pago original, en un plazo de 5 a 10 días hábiles, dependiendo del método (por ejemplo, tarjetas de crédito o débito como OCA o Visa).</li>
-                    <li>Los posibles costos asociados al reembolso (como comisiones de dLocal) serán deducidos del monto reembolsado, salvo en casos de problemas técnicos atribuibles a CIA.UY.</li>
-                </ul>
-                <h3>3. Excepciones</h3>
-                <p>No se ofrecen reembolsos en los siguientes casos:</p>
-                <ul class="course-features">
-                    <li>Cancelaciones después de los plazos mencionados.</li>
-                    <li>Acceso a más del 25% del contenido del curso.</li>
-                    <li>Transferencias de credenciales a terceros sin autorización previa.</li>
-                </ul>
-                <h3>4. Pagos con dLocal</h3>
-                <p>Los pagos procesados a través de dLocal están sujetos a sus términos y condiciones. dLocal puede aplicar restricciones adicionales según el método de pago (por ejemplo, cuotas sin interés no reembolsables en ciertos casos). Te recomendamos revisar los detalles en <a href="https://dlocal.com" target="_blank">dlocal.com</a>.</p>
-                <h3>5. Contacto</h3>
-                <p>Si tienes dudas sobre reembolsos, contáctanos en <a href="mailto:soporte@cia.uy">soporte@cia.uy</a> o por WhatsApp al +598 96 308 883. Responderemos en un plazo máximo de 24 horas.</p>
-                <h3>6. Cambios en la Política</h3>
-                <p>Esta política puede actualizarse, y los cambios se publicarán en esta página. Última actualización: 11 de junio de 2025.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modals for Course Previews -->
-    <div class="modal" id="preview-modal-intro">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar modal de vista previa">✕</button>
-            <h2 class="modal-title">Vista Previa de Introducción a la IA</h2>
-            <video controls style="width: 100%; max-height: 400px;">
-                <source src="https://example.com/intro-preview.mp4" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="preview-modal-ml">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar modal de vista previa">✕</button>
-            <h2 class="modal-title">Vista Previa de Machine Learning Intermedio</h2>
-            <video controls style="width: 100%; max-height: 400px;">
-                <source src="https://example.com/ml-preview.mp4" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="preview-modal-dl">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Cerrar modal de vista previa">✕</button>
-            <h2 class="modal-title">Vista Previa de Deep Learning Avanzado</h2>
-            <video controls style="width: 100%; max-height: 400px;">
-                <source src="https://example.com/dl-preview.mp4" type="video/mp4">
-                Tu navegador no soporta videos.
-            </video>
-        </div>
-    </div>
-
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <a href="#" class="footer-logo">CIA.UY</a>
-                    <p>Cursos especializados en Inteligencia Artificial para Uruguay y Latinoamérica.</p>
-                </div>
-                <div>
-                    <h4>Cursos</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Introducción a la IA</a></li>
-                        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Machine Learning</a></li>
-                        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Deep Learning</a></li>
-                        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">IA para Negocios</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contacto</h4>
-                    <p><a href="mailto:soporte@cia.uy" style="color: white; text-decoration: none; opacity: 0.8;">soporte@cia.uy</a></p>
-                    <p><a href="https://wa.me/59896308883" style="color: white; text-decoration: none; opacity: 0.8;">096 308 883</a></p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/pablodelvalle1/" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <h4 class="text-xl font-semibold mb-4">CIA.UY</h4>
+                    <p class="mb-4">Cursos especializados en Inteligencia Artificial para Uruguay y Latinoamérica.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/pablodelvalle1/" 
+                           target="_blank" 
+                           class="text-white hover:text-gray-300 transition-all">
+                            <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="https://wa.me/59896308883" class="social-link" aria-label="WhatsApp">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <a href="https://wa.me/59896308883" 
+                           class="text-white hover:text-gray-300 transition-all">
+                            <i class="fab fa-whatsapp text-xl"></i>
                         </a>
                     </div>
                 </div>
+                
                 <div>
-                    <h4>Políticas</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" class="policy-link" data-modal="privacy-modal" style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Política de Privacidad</a></li>
-                        <li><a href="#" class="policy-link" data-modal="refund-modal" style="color: white; text-decoration: none; opacity: 0.8; transition: var(--transition);">Política de Reembolso</a></li>
+                    <h4 class="text-xl font-semibold mb-4">Cursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300 transition-all">Introducción a la IA</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-all">Machine Learning</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-all">Deep Learning</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-all">IA para Negocios</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:soporte@cia.uy" class="hover:text-gray-300 transition-all">soporte@cia.uy</a></li>
+                        <li><a href="https://wa.me/59896308883" class="hover:text-gray-300 transition-all">096 308 883</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Políticas</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300 transition-all policy-link" data-modal="privacy-modal">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-all policy-link" data-modal="refund-modal">Política de Reembolso</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
                 <p>© 2025 CIA.UY - PABLO DEL VALLE RIVA, CHE-457.894.567 MWST Registered in Switzerland - Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Sticky CTA -->
-    <div class="sticky-cta" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: none;">
-        <a href="#cursos" class="btn btn-primary">¡Inscribirme Ahora y Obtener 50% de Descuento!</a>
+    <div class="fixed bottom-4 right-4 z-50 hidden" id="sticky-cta">
+        <a href="#cursos" 
+           class="bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium transition-all shadow-lg">
+            ¡Descuento 50%!
+        </a>
     </div>
 
     <!-- Back to Top -->
-    <button class="back-to-top" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: none; padding: 1rem; background: var(--primary); color: white; border: none; border-radius: var(--rounded-sm); cursor: pointer;" aria-label="Volver al inicio de la página">↑ Volver arriba</button>
+    <button id="back-to-top" 
+            class="fixed bottom-4 left-4 z-50 hidden w-12 h-12 bg-primary text-white rounded-full shadow-lg transition-all"
+            aria-label="Volver al inicio de la página">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Floating FAQ Chatbot -->
-    <div class="faq-chatbot" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-        <button class="faq-toggle" aria-label="Abrir preguntas frecuentes">
-            <img src="https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg" alt="Abrir preguntas frecuentes con Pablo Del Valle" class="faq-icon" loading="lazy" onerror="this.src='https://via.placeholder.com/50';">
+    <!-- FAQ Chatbot -->
+    <div class="fixed bottom-4 right-4 z-50" id="faq-chatbot">
+        <button id="faq-toggle" 
+                class="w-14 h-14 rounded-full overflow-hidden shadow-lg transition-all"
+                aria-label="Abrir preguntas frecuentes">
+            <img src="https://d3d8wlnuivx0vo.cloudfront.net/avatar-user_2y669aN76cWaMmaToLSCgORm0vH-1749142547919.jpg" 
+                 alt="Abrir preguntas frecuentes con Pablo Del Valle" 
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/50'">
         </button>
-        <div class="faq-content" style="display: none;">
-            <div class="faq-header">
-                <h3>Preguntas Frecuentes</h3>
-                <button class="faq-close" aria-label="Cerrar preguntas frecuentes">✕</button>
+        
+        <div id="faq-content" 
+             class="fixed bottom-20 right-0 w-full max-w-xs bg-white rounded-lg shadow-lg hidden transition-all overflow-hidden">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="text-lg font-semibold">Preguntas Frecuentes</h3>
+                <button id="faq-close" 
+                        class="text-gray-500 hover:text-gray-700"
+                        aria-label="Cerrar preguntas frecuentes">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4>¿Necesito experiencia previa?</h4>
-                    <p>No, ofrecemos cursos para todos los niveles, desde principiantes hasta avanzados.</p>
+            
+            <div class="p-4">
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-2">¿Necesito experiencia previa?</h4>
+                    <p class="text-sm text-gray-600">No, ofrecemos cursos para todos los niveles, desde principiantes hasta avanzados.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>¿Cómo accedo a las clases?</h4>
-                    <p>Las clases son vía Zoom, y recibirás las credenciales por correo tras el pago.</p>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-2">¿Cómo accedo a las clases?</h4>
+                    <p class="text-sm text-gray-600">Las clases son vía Zoom, y recibirás las credenciales por correo tras el pago.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>¿Qué incluye el curso?</h4>
-                    <p>Clases en vivo, materiales descargables, soporte continuo y un certificado de finalización.</p>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold mb-2">¿Qué incluye el curso?</h4>
+                    <p class="text-sm text-gray-600">Clases en vivo, materiales descargables, soporte continuo y un certificado de finalización.</p>
                 </div>
-                <div class="faq-item">
-                    <h4>¿Puedo pagar en cuotas?</h4>
-                    <p>Sí, ofrecemos hasta 12 cuotas sin interés a través de dLocal.</p>
+                
+                <div>
+                    <h4 class="font-semibold mb-2">¿Puedo pagar en cuotas?</h4>
+                    <p class="text-sm text-gray-600">Sí, ofrecemos hasta 12 cuotas sin interés a través de dLocal.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Payment Modal -->
+    <div id="payment-modal" 
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all">
+        <div class="bg-white rounded-lg p-8 max-w-lg w-full max-h-screen overflow-y-auto relative">
+            <button id="payment-modal-close" 
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                    aria-label="Cerrar modal de pago">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-2xl font-semibold mb-4">Inscribirte en <span id="modal-course-name"></span></h2>
+            
+            <div class="grid gap-4 mb-6">
+                <div class="border border-gray-200 rounded-lg p-4 text-center">
+                    <h3 class="text-lg font-semibold mb-2">Pagar con dLocal</h3>
+                    <p class="mb-4">Pago en hasta 12 cuotas sin interés de <span id="modal-usd-installments"></span> (Total: <span id="modal-usd-price"></span>)</p>
+                    <button id="dlocal-button" 
+                            class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-md font-medium transition-all">
+                        Pagar en USD con dLocal
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-xs text-gray-500">
+                <p class="mb-2">Una vez procesado el pago correctamente, recibirás las credenciales para acceder al curso por correo electrónico. Los cursos inician el primer sábado de cada mes. Si el curso es un regalo, puedes compartir las credenciales con otra persona, pero cada pago corresponde a una sola persona. Para inscripciones de múltiples personas, realiza pagos separados o contáctanos en <a href="mailto:soporte@cia.uy" class="text-primary hover:underline">soporte@cia.uy</a> para una oferta personalizada.</p>
+                
+                <p class="font-semibold text-discount mt-3">
+                    ¿Problemas con el pago? Contáctanos por 
+                    <a href="https://wa.me/59896308883" 
+                       class="bg-primary hover:bg-blue-700 text-white py-1 px-3 rounded-md font-medium inline-flex mx-1">
+                        WhatsApp
+                    </a>
+                    o por
+                    <a href="mailto:soporte@cia.uy" 
+                       class="border-2 border-primary text-primary hover:bg-primary hover:text-white py-1 px-3 rounded-md font-medium inline-flex mx-1">
+                        correo
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" 
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all">
+        <div class="bg-white rounded-lg p-8 max-w-3xl w-full max-h-screen overflow-y-auto relative">
+            <button id="privacy-modal-close" 
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                    aria-label="Cerrar modal de política de privacidad">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-2xl font-semibold mb-4">Política de Privacidad</h2>
+            
+            <div class="prose">
+                <p>En CIA.UY, respetamos tu privacidad y cumplimos con la normativa de protección de datos de Uruguay (Ley Nº 18.331). A continuación, te explicamos cómo recopilamos, usamos y protegemos tu información personal.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">1. Responsable del Tratamiento de Datos</h3>
+                <p>CIA.UY, operado por Pablo Del Valle Riva (CHE-457.894.567 MWST, registrado en Suiza), es el responsable del tratamiento de tus datos personales. Puedes contactarnos en <a href="mailto:soporte@cia.uy" class="text-primary hover:underline">soporte@cia.uy</a> o al +598 96 308 883.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">2. Datos Recopilados</h3>
+                <p>Recopilamos la siguiente información:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Datos de contacto:</strong> Nombre, correo electrónico, número de teléfono (por ejemplo, al contactarnos vía WhatsApp o email).</li>
+                    <li><strong>Datos de pago:</strong> Información necesaria para procesar pagos a través de dLocal (como datos de tarjeta o métodos de pago locales), que se gestiona directamente por dLocal conforme a sus políticas.</li>
+                    <li><strong>Datos de uso:</strong> Información sobre tu interacción con nuestro sitio web, recopilada a través de Matomo Analytics (como páginas visitadas, tiempo en el sitio).</li>
+                    <li><strong>Datos del test:</strong> Respuestas al test de recomendación de cursos, utilizadas únicamente para personalizar tu experiencia.</li>
+                </ul>
+                
+                <!-- Más secciones de política aquí -->
+                <h3 class="text-xl font-semibold mt-6 mb-2">3. Finalidad del Tratamiento</h3>
+                <p>Usamos tus datos para:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Procesar inscripciones y pagos de cursos.</li>
+                    <li>Enviar comunicaciones relacionadas con los cursos (credenciales, recordatorios).</li>
+                    <li>Responder a consultas a través de WhatsApp, email o formularios.</li>
+                    <li>Mejorar nuestro sitio web mediante análisis anónimo (Matomo).</li>
+                    <li>Personalizar recomendaciones basadas en el test.</li>
+                </ul>
+                
+                <!-- Continúan las demás secciones de la política de privacidad -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Preview Modals -->
+    <div id="preview-modal-intro" 
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all">
+        <div class="bg-white rounded-lg p-8 max-w-3xl w-full max-h-screen overflow-y-auto relative">
+            <button id="preview-intro-close" 
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                    aria-label="Cerrar vista previa">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-2xl font-semibold mb-4">Vista Previa de Introducción a la IA</h2>
+            <div class="aspect-w-16 aspect-h-9">
+                <video controls class="w-full">
+                    <source src="https://example.com/intro-preview.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modals para otros cursos -->
+    <div id="preview-modal-ml" 
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all">
+        <!-- Contenido similar al preview-modal-intro -->
+    </div>
+
+    <div id="preview-modal-dl" 
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all">
+        <!-- Contenido similar al preview-modal-intro -->
+    </div>
+
+    <!-- JavaScript -->
     <script>
-    /* Funciones Helpers */
-    function openModal(modal,focusElement){modal.style.display='flex';document.body.style.overflow='hidden';focusElement.focus();_paq.push(['trackEvent','Modal','Open',modal.id]);}
-    function closeModal(modal){modal.style.display='none';document.body.style.overflow='auto';_paq.push(['trackEvent','Modal','Close',modal.id]);}
-    function trapFocus(modal){const focusableElements=modal.querySelectorAll('a[href],button,input,select,textarea,[tabindex]:not([tabindex="-1"])');const firstElement=focusableElements[0];const lastElement=focusableElements[focusableElements.length-1];modal.addEventListener('keydown',e=>{if(e.key==='Tab'){if(e.shiftKey&&document.activeElement===firstElement){e.preventDefault();lastElement.focus();}else if(!e.shiftKey&&document.activeElement===lastElement){e.preventDefault();firstElement.focus();}}});}
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));
+        });
 
-    /* Menú Móvil */
-    const menuToggle=document.querySelector('.menu-toggle');const navMenu=document.querySelector('.nav-menu');
-    menuToggle.addEventListener('click',()=>{navMenu.classList.toggle('active');menuToggle.setAttribute('aria-expanded',navMenu.classList.contains('active'));_paq.push(['trackEvent','Navigation','Toggle Menu']);});
+        // Test functionality
+        const testForm = document.getElementById('course-test');
+        const testResult = document.getElementById('test-result');
+        const questions = document.querySelectorAll('.test-question');
+        const prevStepBtn = document.getElementById('prev-step');
+        const nextStepBtn = document.getElementById('next-step');
+        const submitTestBtn = document.getElementById('submit-test');
+        const resetTestBtn = document.getElementById('reset-test');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const recommendedCourse = document.getElementById('recommended-course');
+        const resultDescription = document.getElementById('result-description');
+        const resultJustification = document.getElementById('result-justification');
+        const resultEnrollBtn = document.getElementById('result-enroll-btn');
+        
+        let currentStep = 1;
+        const totalSteps = 6;
+        
+        function showQuestion(step) {
+            questions.forEach(q => q.classList.add('hidden'));
+            document.querySelector(`.test-question[data-step="${step}"]`).classList.remove('hidden');
+            
+            prevStepBtn.classList.toggle('hidden', step === 1);
+            nextStepBtn.classList.toggle('hidden', step === totalSteps);
+            submitTestBtn.classList.toggle('hidden', step !== totalSteps);
+            
+            const progressPercent = (step / totalSteps) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+            progressText.textContent = `Paso ${step} de ${totalSteps}`;
+        }
+        
+        function checkAllAnswered() {
+            const currentQuestion = document.querySelector(`.test-question[data-step="${currentStep}"]`);
+            return currentQuestion.querySelector('input:checked') !== null;
+        }
+        
+        nextStepBtn.addEventListener('click', () => {
+            if (checkAllAnswered() && currentStep < totalSteps) {
+                currentStep++;
+                showQuestion(currentStep);
+            }
+        });
+        
+        prevStepBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                showQuestion(currentStep);
+            }
+        });
+        
+        resetTestBtn.addEventListener('click', () => {
+            testForm.reset();
+            currentStep = 1;
+            showQuestion(currentStep);
+            testResult.classList.add('hidden');
+            testForm.classList.remove('hidden');
+        });
+        
+        testForm.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            if (checkAllAnswered()) {
+                const formData = new FormData(testForm);
+                const answers = {
+                    programming: formData.get('programming'),
+                    ai_tools: formData.get('ai_tools'),
+                    interest: formData.get('interest'),
+                    goal: formData.get('goal'),
+                    availability: formData.get('availability'),
+                    learning_style: formData.get('learning_style')
+                };
+                
+                // Lógica para determinar el curso recomendado basado en las respuestas
+                let score = 0;
+                const weights = {
+                    programming: {none: 0, basic: 1, intermediate: 2, advanced: 3},
+                    ai_tools: {none: 0, basic: 1, intermediate: 2, advanced: 3},
+                    interest: {general: 0, vision: 2, nlp: 2, predictive: 1},
+                    goal: {learn: 1, apply: 2, specialize: 3},
+                    availability: {low: 0.5, medium: 1, high: 1.5},
+                    learning_style: {practical: 0.5, theoretical: 0, mixed: 0.25}
+                };
+                
+                score += weights.programming[answers.programming] * 0.3;
+                score += weights.ai_tools[answers.ai_tools] * 0.3;
+                score += weights.interest[answers.interest] * 0.2;
+                score += weights.goal[answers.goal] * 0.15;
+                score += weights.availability[answers.availability] * 0.05;
+                score += weights.learning_style[answers.learning_style] * 0.05;
+                
+                let courseName, description, justification, dlocalLink;
+                
+                if (score <= 3) {
+                    courseName = 'Introducción a la IA';
+                    description = 'Curso diseñado para principiantes, con enfoque en fundamentos y proyectos básicos.';
+                    justification = 'Tu nivel inicial y objetivos de aprendizaje hacen que este curso sea ideal para ti.';
+                    dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/Rpq3k6yHStKB59JyRV9Fzk4wDO3JF6iG';
+                } else if (score <= 6) {
+                    courseName = 'Machine Learning Intermedio';
+                    description = 'Enfocado en algoritmos avanzados y proyectos prácticos.';
+                    justification = 'Tu experiencia intermedia y metas de aplicación práctica son perfectas para este curso.';
+                    dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/YYIFY8hmVOzqYbCUUXV6wiVqdWH2IiBY';
+                } else {
+                    if (answers.interest === 'vision') {
+                        courseName = 'Deep Learning Avanzado (Visión por Computadora)';
+                    } else if (answers.interest === 'nlp') {
+                        courseName = 'Deep Learning Avanzado (NLP)';
+                    } else {
+                        courseName = 'Deep Learning Avanzado';
+                    }
+                    
+                    description = 'Curso avanzado con énfasis en redes neuronales profundas.';
+                    justification = 'Tu experiencia avanzada y objetivos de especialización hacen que este curso sea ideal.';
+                    dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/KOuaELrUOYWTMS89g2fcEaFQMlsKuehs';
+                }
+                
+                recommendedCourse.textContent = courseName;
+                resultDescription.textContent = description;
+                resultJustification.textContent = justification;
+                resultEnrollBtn.dataset.dlocalLink = dlocalLink;
+                
+                testForm.classList.add('hidden');
+                testResult.classList.remove('hidden');
+                
+                // Guardar resultados en localStorage
+                localStorage.setItem('testResult', JSON.stringify({
+                    courseName,
+                    description,
+                    justification,
+                    dlocalLink
+                }));
+            }
+        });
 
-    /* Test */
-    const testForm=document.getElementById('course-test');const testResult=document.getElementById('test-result');const recommendedCourse=document.getElementById('recommended-course');const resultDescription=document.getElementById('result-description');const resultJustification=document.getElementById('result-justification');const resultEnrollBtn=document.getElementById('result-enroll-btn');const questions=document.querySelectorAll('.test-question');const prevStepBtn=document.getElementById('prev-step');const nextStepBtn=document.getElementById('next-step');const submitTestBtn=document.getElementById('submit-test');const resetTestBtn=document.getElementById('reset-test');const progressBar=document.querySelector('.progress-bar');const progressText=document.querySelector('.progress-text');let currentStep=1;const totalSteps=6;
-    function showQuestion(step){questions.forEach(q=>q.style.display='none');questions[step-1].style.display='block';prevStepBtn.style.display=step===1?'none':'inline-flex';nextStepBtn.style.display=step===totalSteps?'none':'inline-flex';submitTestBtn.style.display=step===totalSteps?'inline-flex':'none';progressBar.style.width=`${(step/totalSteps)*100}%`;progressText.textContent=`Paso ${step} de ${totalSteps}`;progressBar.setAttribute('aria-valuenow',(step/totalSteps)*100);window.scrollTo({top:testForm.offsetTop-100,behavior:'smooth'});}
-    function checkAllAnswered(){return Array.from(questions).every(q=>q.querySelector('input:checked'));}
-    questions.forEach((q,i)=>{q.querySelectorAll('input[type="radio"]').forEach(r=>r.addEventListener('change',()=>{if(i+1===currentStep&&checkAllAnswered())nextStepBtn.disabled=false;_paq.push(['trackEvent','Test','Question Answered',`Step ${i+1}`]);}));});
-    nextStepBtn.addEventListener('click',()=>{if(checkAllAnswered()&&currentStep<totalSteps){currentStep++;showQuestion(currentStep);if(!checkAllAnswered())nextStepBtn.disabled=true;}});
-    prevStepBtn.addEventListener('click',()=>{if(currentStep>1){currentStep--;showQuestion(currentStep);nextStepBtn.disabled=false;}});
-    resetTestBtn.addEventListener('click',()=>{testForm.reset();currentStep=1;showQuestion(currentStep);testResult.style.display='none';testForm.style.display='block';_paq.push(['trackEvent','Test','Reset']);});
-    testForm.addEventListener('submit',e=>{e.preventDefault();if(checkAllAnswered()){const formData=new FormData(testForm);const programming=formData.get('programming');const ai_tools=formData.get('ai_tools');const interest=formData.get('interest');const goal=formData.get('goal');const availability=formData.get('availability');const learning_style=formData.get('learning_style');let score=0;const weights={programming:{none:0,basic:1,intermediate:2,advanced:3},ai_tools:{none:0,basic:1,intermediate:2,advanced:3},interest:{general:0,vision:2,nlp:2,predictive:1},goal:{learn:1,apply:2,specialize:3},availability:{low:0.5,medium:1,high:1.5},learning_style:{practical:0.5,theoretical:0,mixed:0.25}};score+=weights.programming[programming]*0.3;score+=weights.ai_tools[ai_tools]*0.3;score+=weights.interest[interest]*0.2;score+=weights.goal[goal]*0.15;pscore+=weights.availability[availability]*0.05;score+=weights.learning_style[learning_style]*0.05;let recommendation,description,justification,dlocalLink;const courseCards=document.querySelectorAll('.course-card');courseCards.forEach(c=>c.style.display='block');if(score<=3){recommendation='Introducción a la IA';description='Curso diseñado para principiantes, con enfoque en fundamentos y proyectos básicos.';justification='Tu nivel inicial y objetivos de aprendizaje hacen que este curso sea ideal para ti.';dlocalLink='https://checkout.dlocalgo.com/validate/recurring/Rpq3k6yHStKB59JyRV9Fzk4wDO3JF6iG';courseCards.forEach(c=>c.querySelector('h3').textContent!==recommendation?c.style.display='none':null);}else if(score<=6){recommendation='Machine Learning Intermedio';description='Enfocado en algoritmos avanzados y proyectos prácticos.';justification='Tu experiencia intermedia y metas de aplicación práctica son perfectas para este curso.';dlocalLink='https://checkout.dlocalgo.com/validate/recurring/YYIFY8hmVOzqYbCUUXV6wiVqdWH2IiBY';courseCards.forEach(c=>c.querySelector('h3').textContent!==recommendation?c.style.display='none':null);}else{recommendation='Deep Learning Avanzado';description='Curso avanzado con énfasis en redes neuronales profundas.';justification='Tu experiencia avanzada y objetivos de especialización hacen que este curso sea ideal.';dlocalLink='https://checkout.dlocalgo.com/validate/recurring/KOuaALrUOYWTMS89g2fcEaFQMlsKuehs';if(interest==='vision'){recommendation='Deep Learning Avanzado (Visión por Computadora)';description='Enfocado en técnicas avanzadas de Deep Learning para visión por computadora.';justification='Tu interés en visión por computadora y experiencia avanzada hacen que esta especialización sea ideal.';}else if(interest==='nlp'){recommendation='Deep Learning Avanzado (NLP)';description='Enfocado en técnicas avanzadas de Deep Learning para procesamiento de lenguaje natural.';justification='Tu interés en NLP y experiencia avanzada hacen que esta especialización sea ideal.';}courseCards.forEach(c=>c.querySelector('h3').textContent.includes('Deep Learning')?null:c.style.display='none');}recommendedCourse.textContent=recommendation;resultDescription.textContent=description;resultJustification.textContent=justification;resultEnrollBtn.setAttribute('data-dlocal-link',dlocalLink);testForm.style.display='none';testResult.style.display='block';localStorage.setItem('testResult',JSON.stringify({recommendation,description,justification,dlocalLink}));_paq.push(['trackEvent','Test','Complete',recommendation]);window.scrollTo({top:testResult.offsetTop-100,behavior:'smooth'});}});
+        // Cargar resultados guardados si existen
+        window.addEventListener('load', () => {
+            const savedResult = localStorage.getItem('testResult');
+            if (savedResult) {
+                const { courseName, description, justification, dlocalLink } = JSON.parse(savedResult);
+                
+                recommendedCourse.textContent = courseName;
+                resultDescription.textContent = description;
+                resultJustification.textContent = justification;
+                resultEnrollBtn.dataset.dlocalLink = dlocalLink;
+                
+                testForm.classList.add('hidden');
+                testResult.classList.remove('hidden');
+            }
+        });
 
-    /* Cargar Resultados Guardados */
-    window.addEventListener('load',()=>{const savedResult=localStorage.getItem('testResult');if(savedResult){const{recommendation,description,justification,dlocalLink}=JSON.parse(savedResult);recommendedCourse.textContent=recommendation;resultDescription.textContent=description;resultJustification.textContent=justification;resultEnrollBtn.setAttribute('data-dlocal-link',dlocalLink);testForm.style.display='none';testResult.style.display='block';const courseCards=document.querySelectorAll('.course-card');courseCards.forEach(c=>c.style.display=c.querySelector('h3').textContent.includes(recommendation.split(' (')[0])?c.style.display='block':c.style.display='none');}});
+        // Modal functionality
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+        }
 
-    /* Botones de Inscripción */
-    const enrollButtons=document.querySelectorAll('.enroll-btn');const paymentModal=document.getElementById('payment-modal');const modalCourseName=document.getElementById('modal-course-name');const modalUsdPrice=document.getElementById('modal-usd-price');const modalUsdInstallments=document.getElementById('modal-usd-installments');const dlocalButton=document.getElementById('dlocal-button');enrollButtons.forEach(btn=>btn.addEventListener('click',()=>{modalCourseName.textContent=btn.dataset.course;modalUsdPrice.textContent=btn.dataset.usdPrice;modalUsdInstallments.textContent=`${(parseFloat(btn.dataset.usdPrice.replace('$','').replace(' USD',''))/12).toFixed(2)} USD`;dlocalButton.dataset.dlocalLink=btn.dataset.dlocalLink;openModal(paymentModal,dlocalButton);}));
-    dlocalButton.addEventListener('click',()=>{try{window.location.href=dlocalButton.dataset.dlocalLink;_paq.push(['trackEvent','Payment','Start',modalCourseName.textContent]);}catch(e){alert('Error al procesar el pago. Por favor, contáctanos en soporte@cia.uy.');_paq.push(['trackEvent','Payment','Error',modalCourseName.textContent]);}});
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
 
-    /* Modales */
-    const modals=document.querySelectorAll('.modal');const modalLinks=document.querySelectorAll('[data-modal]');modalLinks.forEach(link=>link.addEventListener('click',e=>{e.preventDefault();const modal=document.getElementById(link.dataset.modal);openModal(modal,modal.querySelector('.modal-close'));trapFocus(modal);}));modals.forEach(modal=>{modal.addEventListener('click',e=>{if(e.target===modal)closeModal(modal);});modal.querySelector('.modal-close').addEventListener('click',()=>{closeModal(modal);});});
+        // Botones de inscripción
+        document.querySelectorAll('.enroll-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('modal-course-name').textContent = btn.dataset.course;
+                document.getElementById('modal-usd-price').textContent = btn.dataset.usdPrice;
+                document.getElementById('modal-usd-installments').textContent = (parseFloat(btn.dataset.usdPrice.replace('$', '').replace(' USD', '')) / 12).toFixed(2) + ' USD';
+                document.getElementById('dlocal-button').dataset.dlocalLink = btn.dataset.dlocalLink;
+                openModal('payment-modal');
+            });
+        });
 
-    /* Resultado del Test */
-    resultEnrollBtn.addEventListener('click',()=>{try{window.location.href=resultEnrollBtn.dataset.dlocalLink;_paq.push(['trackEvent','Payment','Start',recommendedCourse.textContent]);}catch(e){alert('Error al procesar el pago. Por favor, contáctanos en soporte@cia.uy.');_paq.push(['trackEvent','Payment','Error',recommendedCourse.textContent]);}});
+        // Botón de dLocal
+        document.getElementById('dlocal-button').addEventListener('click', () => {
+            const link = document.getElementById('dlocal-button').dataset.dlocalLink;
+            try {
+                window.location.href = link;
+            } catch(e) {
+                alert('Error al procesar el pago. Por favor, contáctanos en soporte@cia.uy.');
+            }
+        });
 
-    /* Sticky CTA */
-    const stickyCta=document.querySelector('.sticky-cta');const heroSection=document.querySelector('.hero');window.addEventListener('scroll',()=>{stickyCta.style.display=window.scrollY>heroSection.offsetHeight?'block':'none';});
+        // Enlace de resultado del test
+        resultEnrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const link = resultEnrollBtn.dataset.dlocalLink;
+            try {
+                window.location.href = link;
+            } catch(e) {
+                alert('Error al procesar el pago. Por favor, contáctanos en soporte@cia.uy.');
+            }
+        });
 
-    /* Back to Top */
-    const backToTop=document.querySelector('.back-to-top');window.addEventListener('scroll',()=>{backToTop.style.display=window.scrollY>300?'block':'none';});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});_paq.push(['trackEvent','Navigation','Back to Top']);});
+        // Cerrar modales
+        document.getElementById('payment-modal-close').addEventListener('click', () => closeModal('payment-modal'));
+        document.getElementById('privacy-modal-close').addEventListener('click', () => closeModal('privacy-modal'));
+        
+        // Botones para abrir modales de política
+        document.querySelectorAll('.policy-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(link.dataset.modal);
+            });
+        });
 
-    /* Newsletter */
-    document.querySelector('.newsletter-form').addEventListener('submit',e=>{e.preventDefault();const email=e.target.querySelector('input[type="email"]').value;_paq.push(['trackEvent','Newsletter','Subscribe',email]);alert('¡Gracias por suscribirte! Pronto recibirás nuestras novedades.');e.target.reset();});
+        // Botones para abrir vista previa de cursos
+        document.querySelectorAll('.preview-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                openModal(btn.dataset.modal);
+            });
+        });
 
-    /* FAQ Chatbot */
-    const faqToggle=document.querySelector('.faq-toggle');const faqContent=document.querySelector('.faq-content');faqToggle.addEventListener('click',()=>{faqContent.style.display=faqContent.style.display==='none'?'block':'none';faqToggle.setAttribute('aria-expanded',faqContent.style.display==='block');_paq.push(['trackEvent','FAQ','Toggle']);});document.querySelector('.faq-close').addEventListener('click',()=>{faqContent.style.display='none';faqToggle.setAttribute('aria-expanded','false');_paq.push(['trackEvent','FAQ','Close']);});
+        // Sticky CTA
+        window.addEventListener('scroll', () => {
+            const heroHeight = document.querySelector('.hero-section').offsetHeight;
+            const stickyCta = document.getElementById('sticky-cta');
+            
+            if (window.scrollY > heroHeight) {
+                stickyCta.classList.remove('hidden');
+            } else {
+                stickyCta.classList.add('hidden');
+            }
+        });
 
-    /* Seguimiento de Botones */
-    document.querySelectorAll('.btn').forEach(btn=>btn.addEventListener('click',()=>{_paq.push(['trackEvent','Button','Click',btn.textContent]);}));
+        // Back to Top
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('back-to-top');
+            
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // FAQ Chatbot
+        document.getElementById('faq-toggle').addEventListener('click', () => {
+            const faqContent = document.getElementById('faq-content');
+            faqContent.classList.toggle('hidden');
+            document.getElementById('faq-toggle').setAttribute('aria-expanded', !faqContent.classList.contains('hidden'));
+        });
+
+        document.getElementById('faq-close').addEventListener('click', () => {
+            document.getElementById('faq-content').classList.add('hidden');
+            document.getElementById('faq-toggle').setAttribute('aria-expanded', 'false');
+        });
+
+        // Newsletter Form
+        document.querySelector('#newsletter form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert('¡Gracias por suscribirte! Pronto recibirás nuestras novedades.');
+            e.target.reset();
+        });
+
+        // Close modals when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal.id);
+                }
+            });
+        });
     </script>
 </body>
 </html>
