@@ -1801,7 +1801,13 @@
 
         testForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            if (validateStep(currentStep)) {
+            
+            // Validar que todas las preguntas tengan respuesta
+            const allAnswered = Array.from(document.querySelectorAll('.test-question')).every(question => {
+                return question.querySelector('input[type="radio"]:checked');
+            });
+
+            if (allAnswered) {
                 const formData = new FormData(testForm);
                 let score = 0;
                 let recommendation = '';
@@ -1816,7 +1822,7 @@
                 const goal = formData.get('goal');
                 const availability = formData.get('availability');
 
-                // Lógica de puntuación
+                // Lógica de puntuación mejorada
                 if (programming === 'none') score += 0;
                 else if (programming === 'basic') score += 1;
                 else if (programming === 'intermediate') score += 2;
@@ -1827,6 +1833,11 @@
                 else if (ai_tools === 'intermediate') score += 2;
                 else if (ai_tools === 'advanced') score += 3;
 
+                // Considerar el interés específico del usuario
+                if (interest === 'general') score += 0;
+                else if (interest === 'vision' || interest === 'nlp') score += 2;
+                else if (interest === 'predictive') score += 1;
+
                 if (goal === 'learn') score += 1;
                 else if (goal === 'apply') score += 2;
                 else if (goal === 'specialize') score += 3;
@@ -1835,7 +1846,7 @@
                 else if (availability === 'medium') score += 2;
                 else if (availability === 'high') score += 3;
 
-                // Determinar recomendación
+                // Determinar recomendación mejorada
                 if (score <= 5) {
                     recommendation = 'Introducción a la IA';
                     description = 'Ideal para principiantes que desean aprender los fundamentos de la Inteligencia Artificial.';
@@ -1847,25 +1858,58 @@
                     justification = 'Tus respuestas indican que tienes experiencia básica o intermedia en programación y un interés en aplicar IA. Este curso te ayudará a desarrollar habilidades prácticas en Machine Learning.';
                     dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/YYIFY8hmVOzqYbCUUXV6wiVqdWH2IiBY';
                 } else {
-                    recommendation = 'Deep Learning Avanzado';
-                    description = 'Diseñado para profesionales que buscan dominar técnicas avanzadas de Deep Learning.';
-                    justification = 'Con base en tu experiencia avanzada en programación, herramientas de IA, y tu objetivo de especializarte, este curso te permitirá trabajar en proyectos complejos de Deep Learning.';
-                    dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/KOuaALrUOYWTMS89g2fcEaFQMlsKuehs';
+                    // Si el interés es específico y tiene puntaje alto, recomendar curso avanzado
+                    if ((interest === 'vision' || interest === 'nlp') && score > 9) {
+                        recommendation = 'Deep Learning Avanzado';
+                        description = 'Diseñado para profesionales que buscan dominar técnicas avanzadas de Deep Learning.';
+                        justification = 'Con base en tu experiencia avanzada en programación, herramientas de IA, y tu interés específico en visión por computadora o procesamiento de lenguaje, este curso te permitirá trabajar en proyectos complejos de Deep Learning.';
+                        dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/KOuaALrUOYWTMS89g2fcEaFQMlsKuehs';
+                    } else {
+                        recommendation = 'Machine Learning Intermedio';
+                        description = 'Perfecto para quienes tienen conocimientos básicos y quieren implementar algoritmos de Machine Learning.';
+                        justification = 'Tus respuestas indican que tienes experiencia intermedia pero tu interés es más general. Este curso te dará una base sólida en Machine Learning.';
+                        dlocalLink = 'https://checkout.dlocalgo.com/validate/recurring/YYIFY8hmVOzqYbCUUXV6wiVqdWH2IiBY';
+                    }
                 }
 
+                // Actualizar el DOM con la recomendación
                 recommendedCourse.textContent = recommendation;
                 resultDescription.textContent = description;
                 resultJustification.textContent = justification;
+                
+                // Configurar el botón de inscripción
                 resultEnrollBtn.setAttribute('data-dlocal-link', dlocalLink);
                 resultEnrollBtn.setAttribute('data-course', recommendation);
-                resultEnrollBtn.setAttribute('data-usd-price', recommendation === 'Introducción a la IA' ? '$200.00 USD' : recommendation === 'Machine Learning Intermedio' ? '$350.00 USD' : '$500.00 USD');
+                
+                // Establecer el precio correcto
+                if (recommendation === 'Introducción a la IA') {
+                    resultEnrollBtn.setAttribute('data-usd-price', '$200.00 USD');
+                } else if (recommendation === 'Machine Learning Intermedio') {
+                    resultEnrollBtn.setAttribute('data-usd-price', '$350.00 USD');
+                } else {
+                    resultEnrollBtn.setAttribute('data-usd-price', '$500.00 USD');
+                }
 
+                // Mostrar resultados y ocultar el formulario
                 testForm.style.display = 'none';
                 testResult.style.display = 'block';
+                
+                // Desplazarse suavemente a los resultados
                 testResult.scrollIntoView({ behavior: 'smooth' });
+                
+                // Trackear evento en Matomo
                 _paq.push(['trackEvent', 'Test', 'Complete', recommendation]);
             } else {
-                alert('Por favor, selecciona una opción antes de enviar.');
+                alert('Por favor, responde todas las preguntas antes de enviar.');
+                // Encontrar la primera pregunta sin responder y mostrarla
+                const firstUnanswered = Array.from(document.querySelectorAll('.test-question')).find(question => {
+                    return !question.querySelector('input[type="radio"]:checked');
+                });
+                
+                if (firstUnanswered) {
+                    currentStep = parseInt(firstUnanswered.dataset.step);
+                    showQuestion(currentStep);
+                }
             }
         });
 
@@ -1958,6 +2002,30 @@
                     }
                 }
             });
+        });
+
+        resultEnrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const course = this.getAttribute('data-course');
+            const usdPrice = this.getAttribute('data-usd-price');
+            const dlocalLink = this.getAttribute('data-dlocal-link');
+
+            modalCourseName.textContent = course;
+            modalUsdPrice.textContent = usdPrice;
+            
+            // Calcular cuotas
+            const priceValue = parseFloat(usdPrice.replace('$', '').replace(' USD', ''));
+            modalUsdInstallments.textContent = `$${(priceValue / 12).toFixed(2)} USD/mes`;
+            
+            dlocalButton.onclick = () => {
+                window.location.href = dlocalLink;
+                _paq.push(['trackEvent', 'Payment', 'Start', course]);
+            };
+
+            paymentModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            modalCourseName.focus();
+            _paq.push(['trackEvent', 'Modal', 'Open', 'payment-modal']);
         });
     </script>
 </body>
