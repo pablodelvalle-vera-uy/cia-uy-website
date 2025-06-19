@@ -1220,8 +1220,8 @@
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-gray-300 transition-all policy-link" data-modal="privacy-modal">Política de Privacidad</a></li>
                         <li><a href="#" class="hover:text-gray-300 transition-all policy-link" data-modal="refund-modal">Política de Reembolso</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-all">Términos y Condiciones</a></li>
-                        <li><a href="#" class="hover:text-gray-300 transition-all">Cookies</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-all policy-link" data-modal="terms-modal">Términos y Condiciones</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition-all policy-link" data-modal="cookies-modal">Política de Cookies</a></lia>
                     </ul>
                 </div>
             </div>
@@ -1442,7 +1442,132 @@
             </div>
         </div>
     </div>
-
+    <!-- Terms and Conditions Modal -->
+    <div id="terms-modal" 
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all duration-300">
+        <div class="bg-white rounded-lg p-6 max-w-3xl w-full mx-4 max-h-screen overflow-y-auto relative">
+            <button id="terms-modal-close" 
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                    aria-label="Cerrar modal de términos y condiciones">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-2xl font-semibold mb-4">Términos y Condiciones</h2>
+            
+            <div class="prose">
+                <p>Al inscribirte en los cursos ofrecidos por CIA.UY, aceptas los siguientes términos y condiciones. Te recomendamos leerlos cuidadosamente antes de realizar tu inscripción.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">1. Inscripción y Pago</h3>
+                <p>Para participar en nuestros cursos, debes completar el proceso de inscripción y realizar el pago correspondiente a través de los métodos disponibles (dLocal o transferencia bancaria). Los pagos deben ser verificados antes del inicio del curso. Una vez confirmado el pago, recibirás las credenciales de acceso al curso por correo electrónico 24 horas antes del inicio de las clases.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">2. Inicio de Clases</h3>
+                <p>Los cursos comenzarán el <strong>primer sábado de cada mes</strong>, salvo que se indique lo contrario en la comunicación oficial. Nos reservamos el derecho de ajustar las fechas de inicio en caso de fuerza mayor, notificando a los estudiantes con al menos 48 horas de antelación.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">3. Acceso a la Plataforma y Materiales</h3>
+                <p>Tras la verificación del pago, recibirás acceso a nuestra plataforma de aprendizaje, donde encontrarás los materiales del curso (presentaciones, código fuente, grabaciones de clases, etc.). Las credenciales son personales e intransferibles, y su uso indebido puede resultar en la cancelación de tu acceso sin reembolso.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">4. Asistencia y Grabaciones</h3>
+                <p>Las clases se imparten en vivo a través de Zoom. Si no puedes asistir a una sesión, tendrás acceso a las grabaciones de las clases, disponibles en la plataforma durante el período del curso y hasta 30 días después de su finalización. No se ofrecen reembolsos por inasistencias.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">5. Propiedad Intelectual</h3>
+                <p>Todo el contenido proporcionado en los cursos (material didáctico, grabaciones, código fuente, etc.) es propiedad de CIA.UY o de sus respectivos autores y está protegido por leyes de propiedad intelectual. Queda prohibida su reproducción, distribución o uso comercial sin autorización expresa.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">6. Conducta del Estudiante</h3>
+                <p>Esperamos que los estudiantes mantengan un comportamiento respetuoso durante las clases y en las interacciones con instructores y compañeros. Nos reservamos el derecho de suspender el acceso a cualquier estudiante que incurra en conductas inapropiadas, sin derecho a reembolso.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">7. Política de Reembolso</h3>
+                <p>Los reembolsos se rigen por nuestra <a href="#" class="text-primary hover:underline policy-link" data-modal="refund-modal">Política de Reembolso</a>. Te recomendamos revisarla para conocer las condiciones de cancelación y devolución.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">8. Cancelación o Modificación del Curso</h3>
+                <p>CIA.UY se reserva el derecho de cancelar o modificar la programación de un curso por razones operativas o de fuerza mayor. En caso de cancelación, se ofrecerá un reembolso completo o la posibilidad de transferir la inscripción a otra edición del curso. Los cambios en la programación serán notificados con antelación.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">9. Requisitos Técnicos</h3>
+                <p>Es responsabilidad del estudiante asegurarse de contar con una conexión a internet estable y un dispositivo adecuado (computadora con cámara, micrófono y software necesario) para participar en las clases y completar las actividades del curso.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">10. Limitación de Responsabilidad</h3>
+                <p>CIA.UY no será responsable por daños indirectos, incidentales o consecuentes derivados del uso de nuestros servicios, incluyendo interrupciones en la plataforma o problemas técnicos ajenos a nuestro control.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">11. Ley Aplicable</h3>
+                <p>Estos términos se rigen por las leyes de la República Oriental del Uruguay. Cualquier disputa será resuelta en los tribunales competentes de Montevideo, Uruguay.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">12. Contacto</h3>
+                <p>Si tienes preguntas sobre estos términos, contáctanos en <a href="mailto:soporte@cia.uy" class="text-primary hover:underline">soporte@cia.uy</a> o al <a href="https://wa.me/59896308883" class="text-primary hover:underline">+598 96 308 883</a>.</p>
+            </div>
+        </div>
+    </div>
+        <!-- Cookies Policy Modal -->
+    <div id="cookies-modal" 
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden opacity-0 transition-all duration-300">
+        <div class="bg-white rounded-lg p-6 max-w-3xl w-full mx-4 max-h-screen overflow-y-auto relative">
+            <button id="cookies-modal-close" 
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                    aria-label="Cerrar modal de política de cookies">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-2xl font-semibold mb-4">Política de Cookies</h2>
+            
+            <div class="prose">
+                <p>En CIA.UY utilizamos cookies para mejorar tu experiencia en nuestro sitio web, garantizar su funcionamiento y cumplir con las disposiciones de la Ley Nº 18.331 de Protección de Datos Personales de Uruguay. A continuación, te explicamos qué son las cookies, cómo las usamos y cómo puedes gestionarlas.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">1. ¿Qué son las cookies?</h3>
+                <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo (computadora, tablet, smartphone) cuando visitas nuestro sitio web. Estas permiten recopilar información sobre tu navegación para personalizar tu experiencia, analizar el rendimiento del sitio y ofrecerte servicios adaptados.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">2. Tipos de Cookies que Utilizamos</h3>
+                <p>Utilizamos los siguientes tipos de cookies en nuestro sitio:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento básico del sitio, como la navegación y el acceso a áreas seguras. No requieren consentimiento.</li>
+                    <li><strong>Cookies analíticas:</strong> Nos ayudan a entender cómo los usuarios interactúan con el sitio, recopilando datos anónimos como páginas visitadas o tiempo de navegación (ej. Google Analytics).</li>
+                    <li><strong>Cookies de funcionalidad:</strong> Permiten recordar tus preferencias, como resultados del test de recomendación de cursos, para personalizar tu experiencia.</li>
+                    <li><strong>Cookies de publicidad:</strong> Utilizadas para mostrarte anuncios relevantes en nuestro sitio o en plataformas de terceros, según tu comportamiento de navegación.</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">3. Finalidad de las Cookies</h3>
+                <p>Las cookies se utilizan para:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Garantizar el correcto funcionamiento del sitio web.</li>
+                    <li>Analizar el uso del sitio para mejorar su diseño y contenido.</li>
+                    <li>Personalizar tu experiencia, como recordar tus respuestas al test de cursos.</li>
+                    <li>Ofrecer publicidad personalizada, si aplica.</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">4. Consentimiento</h3>
+                <p>Al ingresar a nuestro sitio, se te informará sobre el uso de cookies no esenciales mediante un banner. Puedes aceptar, rechazar o personalizar tus preferencias. Las cookies esenciales no requieren consentimiento, ya que son necesarias para el funcionamiento del sitio. Puedes retirar tu consentimiento en cualquier momento ajustando la configuración de tu navegador.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">5. Gestión de Cookies</h3>
+                <p>Puedes gestionar las cookies a través de:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Configuración del navegador:</strong> Puedes bloquear o eliminar cookies desde las opciones de tu navegador (consultar las instrucciones para Chrome, Firefox, Safari, Edge, etc.). Ten en cuenta que bloquear cookies esenciales puede afectar el funcionamiento del sitio.</li>
+                    <li><strong>Herramientas del sitio:</strong> Si ofrecemos un panel de preferencias de cookies, podrás personalizar qué cookies no esenciales deseas aceptar.</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">6. Transferencia Internacional de Datos</h3>
+                <p>Algunas cookies (como las de Google Analytics) pueden implicar la transferencia de datos a terceros fuera de Uruguay, como a Estados Unidos. Nos aseguramos de que estos terceros cumplan con estándares adecuados de protección de datos, conforme a la normativa uruguaya.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">7. Derechos del Usuario</h3>
+                <p>De acuerdo con la Ley Nº 18.331, tienes derecho a:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Acceder a la información recopilada a través de cookies.</li>
+                    <li>Solicitar la eliminación de datos no esenciales almacenados.</li>
+                    <li>Oponerte al uso de cookies no esenciales.</li>
+                </ul>
+                <p>Para ejercer estos derechos, contáctanos en <a href="mailto:soporte@cia.uy" class="text-primary hover:underline">soporte@cia.uy</a>.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">8. Duración de las Cookies</h3>
+                <p>Las cookies pueden ser:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Cookies de sesión:</strong> Se eliminan al cerrar el navegador.</li>
+                    <li><strong>Cookies persistentes:</strong> Permanecen en tu dispositivo por un período definido (por ejemplo, hasta un año) o hasta que las elimines manualmente.</li>
+                </ul>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">9. Cambios a esta Política</h3>
+                <p>Podemos actualizar esta política para reflejar cambios en nuestras prácticas o en la legislación aplicable. Te notificaremos sobre cambios significativos a través del sitio web o por correo electrónico.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2">10. Contacto</h3>
+                <p>Si tienes preguntas sobre esta política de cookies, contáctanos en <a href="mailto:soporte@cia.uy" class="text-primary hover:underline">soporte@cia.uy</a> o al <a href="https://wa.me/59896308883" class="text-primary hover:underline">+598 96 308 883</a>.</p>
+            </div>
+        </div>
+    </div>
     <!-- JavaScript -->
     <script>
         // Mobile menu toggle
@@ -1697,11 +1822,19 @@
             }
         });
 
+        document.querySelectorAll('.policy-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(link.dataset.modal);
+            });
+        });
         // Cerrar modales
         document.getElementById('payment-modal-close').addEventListener('click', () => closeModal('payment-modal'));
         document.getElementById('privacy-modal-close').addEventListener('click', () => closeModal('privacy-modal'));
         document.getElementById('refund-modal-close').addEventListener('click', () => closeModal('refund-modal'));
-                
+        document.getElementById('terms-modal-close').addEventListener('click', () => closeModal('terms-modal'));
+        document.getElementById('cookies-modal-close').addEventListener('click', () => closeModal('cookies-modal'));
+
         // Botones para abrir modales de política
         document.querySelectorAll('.policy-link').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -1790,6 +1923,13 @@
                 }
             });
         });
+        // Botones para abrir modales de política
+    document.querySelectorAll('.policy-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(link.dataset.modal);
+        });
+    });
     </script>
 </body>
 </html>
